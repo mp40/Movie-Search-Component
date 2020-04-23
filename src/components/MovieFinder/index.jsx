@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const MovieFinder = () => (
-  <div>Movie Finder Widget Placeholder</div>
+  <div>
+    <h1>The Movie Finder Widget</h1>
+  </div>
 );
 
 export default MovieFinder;
