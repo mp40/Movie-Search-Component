@@ -1,10 +1,10 @@
-import React from "react";
-import { shallow } from "enzyme";
-import App from "./App";
+import React from 'react';
+import { shallow } from 'enzyme';
+import App from './App';
 
-describe("wiring test", () => {
+describe('widget review app', () => {
   const wrapper = shallow(<App />);
-  it("should work", () => {
-    expect(wrapper.text()).toContain("Movie Search App");
+  it('should render the movie finder widget', () => {
+    expect(wrapper.find('MovieFinder').exists()).toBe(true);
   });
 });
