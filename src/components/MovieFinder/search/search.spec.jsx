@@ -9,7 +9,7 @@ describe('MovieFinder search input', () => {
     <MovieFinderSearch
       handleSearch={handleSearch}
       handleFilterChange={handleFilterChange}
-    />
+    />,
   );
 
   afterEach(() => {
@@ -34,7 +34,7 @@ describe('MovieFinder search input', () => {
   it('should be possible to set filter to movies', () => {
     const button = wrapper.find('button').at(1);
     button.simulate('click');
-    expect(handleFilterChange).toHaveBeenCalledWith('movies');
+    expect(handleFilterChange).toHaveBeenCalledWith('movie');
   });
   it('should be possible to set filter to tv shows', () => {
     const button = wrapper.find('button').at(2);
@@ -44,6 +44,6 @@ describe('MovieFinder search input', () => {
   it('should be possible to set filter to people', () => {
     const button = wrapper.find('button').at(3);
     button.simulate('click');
-    expect(handleFilterChange).toHaveBeenCalledWith('people');
+    expect(handleFilterChange).toHaveBeenCalledWith('person');
   });
 });
