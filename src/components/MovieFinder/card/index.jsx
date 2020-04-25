@@ -7,21 +7,37 @@ import './styles.css';
 
 const url = 'https://image.tmdb.org/t/p/w200';
 
+
 const MovieFinderCard = ({
-  name, imagePath, mediaType, date, overview,
-}) => (
-  <div className="movieFinderCard">
-    <img src={`${url}${imagePath}`} alt={name} />
-    <div>
-      <p>{name}</p>
-      <p>
-        {mediaTypeText[mediaType]}
-        {date}
-      </p>
-      <p>{overview}</p>
+  name, imagePath, mediaType, date, overview, gender, voteAverage,
+}) => {
+  const getYear = () => date.substring(0, 4);
+
+  const getTypeDetails = () => {
+    if (gender) {
+      return gender === 1 ? 'Gender: Female' : 'Gender: Male';
+    }
+    return date.replace(/-/g, '/');
+  };
+
+  return (
+    <div className="movieFinderCard">
+      <img src={`${url}${imagePath}`} alt={name} />
+      <div>
+        <p>
+          {name}
+          {date && `(${getYear()})`}
+        </p>
+        <p>
+          {mediaTypeText[mediaType]}
+          {getTypeDetails()}
+        </p>
+        <p>{overview}</p>
+        <p>{voteAverage && `User Score: ${voteAverage * 10}%`}</p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 MovieFinderCard.propTypes = {
   name: PropTypes.string.isRequired,
@@ -32,10 +48,20 @@ MovieFinderCard.propTypes = {
     PropTypes.bool,
   ]),
   overview: PropTypes.string.isRequired,
+  gender: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.bool,
+  ]),
+  voteAverage: PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.bool,
+  ]),
 };
 
 MovieFinderCard.defaultProps = {
   date: false,
+  gender: false,
+  voteAverage: false,
 };
 
 export default MovieFinderCard;

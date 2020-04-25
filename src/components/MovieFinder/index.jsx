@@ -34,6 +34,8 @@ const MovieFinder = () => {
           mediaType={item.mediaType}
           date={item.date}
           overview={item.overview}
+          gender={item.gender}
+          voteAverage={item.voteAverage}
         />
       ))}
     </div>
