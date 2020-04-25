@@ -1,5 +1,8 @@
 import {
-  fetchTrending, fetchSearchResults, fetchActorData, getFilteredResults,
+  fetchTrending,
+  fetchSearchResults,
+  fetchActorData,
+  getFilteredResults,
 } from './index';
 
 import payload from '../fixtures/payload.json';
@@ -28,7 +31,9 @@ describe('fetching data', () => {
   it('should fetch trending data from API', async () => {
     const data = await fetchTrending();
     expect(global.fetch).toHaveBeenCalledTimes(1);
-    expect(global.fetch).toHaveBeenCalledWith(`https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`);
+    expect(global.fetch).toHaveBeenCalledWith(
+      `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`
+    );
     expect(data).toEqual(payload);
   });
 
@@ -36,7 +41,9 @@ describe('fetching data', () => {
     const query = 'tiger';
     const data = await fetchSearchResults(query);
     expect(global.fetch).toHaveBeenCalledTimes(1);
-    expect(global.fetch).toHaveBeenCalledWith(`https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&query=${query}&page=1`);
+    expect(global.fetch).toHaveBeenCalledWith(
+      `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&query=${query}&page=1`
+    );
     expect(data).toEqual(payload);
   });
 
@@ -44,7 +51,9 @@ describe('fetching data', () => {
     const id = 1337;
     const data = await fetchActorData(id);
     expect(global.fetch).toHaveBeenCalledTimes(1);
-    expect(global.fetch).toHaveBeenCalledWith(`https://api.themoviedb.org/3/person/${id}?api_key=${API_KEY}&language=en-US`);
+    expect(global.fetch).toHaveBeenCalledWith(
+      `https://api.themoviedb.org/3/person/${id}?api_key=${API_KEY}&language=en-US`
+    );
     expect(data).toEqual(payload);
   });
 
