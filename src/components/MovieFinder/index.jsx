@@ -27,7 +27,14 @@ const MovieFinder = () => {
         handleFilterChange={handleFilterChange}
       />
       {filteredResults.map((item) => (
-        <MovieFinderCard key={item.id} name={item.name} />
+        <MovieFinderCard
+          key={item.id}
+          name={item.name}
+          imagePath={item.imagePath}
+          mediaType={item.mediaType}
+          date={item.date}
+          overview={item.overview}
+        />
       ))}
     </div>
   );
