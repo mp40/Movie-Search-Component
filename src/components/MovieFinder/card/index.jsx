@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Image from '../../Image';
+
 import mediaTypeText from './data';
 
 import './styles.css';
@@ -22,7 +24,7 @@ const MovieFinderCard = ({
 
   return (
     <div className="movieFinderCard">
-      <img src={`${url}${imagePath}`} alt={name} />
+      <Image alt={name} path={`${url}${imagePath}`} />
       <div>
         <p>
           {name}

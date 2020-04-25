@@ -5,6 +5,8 @@ import MovieFinderCard from './card';
 
 import output from '../../fixtures/output.json';
 
+import './styles.css';
+
 const MovieFinder = () => {
   const [searchResults, updateSearchResults] = useState(output);
   const [filteredResults, updateFilteredResults] = useState(output);
@@ -20,7 +22,7 @@ const MovieFinder = () => {
 
 
   return (
-    <div>
+    <div className="movieFinderContainer">
       <h1>The Movie Finder Widget</h1>
       <MovieFinderSearch
         handleSearch={() => {}}
