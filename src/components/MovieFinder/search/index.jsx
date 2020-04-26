@@ -1,30 +1,37 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import filterCategories from './data';
+import FilterButtons from './FilterButtons';
+import Image from '../../Image';
+
+import searchIcon from '../../../assets/searchIcon.svg';
+
+import './styles.css';
+
+const defaultText = 'Search for movies, tv shows or peoples...';
 
 const MovieFinderSearch = ({ handleSearch, handleFilterChange }) => {
   const [value, updateValue] = useState('');
 
   return (
-    <div>
+    <div className="formContainer">
       <form onSubmit={() => handleSearch()}>
-        <input
-          type="text"
-          value={value}
-          onChange={(event) => updateValue(event.target.value)}
-        />
-        <input type="submit" value="Search" />
+        <div className="searchBar">
+          <div className={`inputContainer ${value ? 'hasValue' : 'noValue'}`}>
+            <Image path={searchIcon} alt="search" />
+            <input
+              type="text"
+              value={value}
+              placeholder={defaultText}
+              size={50}
+              onChange={(event) => updateValue(event.target.value)}
+            />
+            {value && <button type="button" onClick={() => updateValue('')}>Clear</button>}
+          </div>
+          <input type="submit" value="Search" />
+        </div>
       </form>
-      {filterCategories.map((category) => (
-        <button
-          type="button"
-          key={category.key}
-          onClick={() => handleFilterChange(category.key)}
-        >
-          {category.value}
-        </button>
-      ))}
+      <FilterButtons handleFilterChange={handleFilterChange} />
     </div>
   );
 };

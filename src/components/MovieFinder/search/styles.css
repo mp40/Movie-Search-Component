@@ -1,0 +1,90 @@
+:root {
+  --border: 1px solid rgb(215, 223, 229);
+  --text-color: rgb(30, 52, 72);
+}
+
+.formContainer {
+  margin: 0 1em;
+}
+
+.formContainer > form {
+  margin: 0 0 1em;
+}
+
+.searchBar {
+  display: flex;
+  width: 100%;
+}
+
+.searchBar > input {
+  border: var(--border);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-left: -1px;
+  color: var(--text-color);
+}
+
+.inputContainer {
+  border: var(--border);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  height: 1.4em;
+  display: flex;
+  flex: 1 0 0;
+}
+
+.inputContainer > img {
+  margin: 0 0.3em 0;
+  width: 0.5em;
+}
+
+.inputContainer > input {
+  box-shadow: none;
+  border: none;
+  margin: 0 0 0.2em;
+  color: var(--text-color);
+  flex: 1 0 0;
+}
+
+.inputContainer > input:focus::placeholder {
+  color: transparent;
+}
+
+.noValue {
+  background-color: #f9fbfc;
+}
+
+.inputContainer > button {
+  border: none;
+  font-size: 0.3em;
+  color: rgb(78, 133, 198);
+}
+
+.filterButton {
+  border: var(--border);
+  border-radius: 3px;
+  padding: 0.15em 0.35em;
+  font-size: 0.9em;
+  color: var(--text-color);
+  min-width: 3em;
+  margin-right: 1em;
+}
+
+.unselected {
+  background-color: white;
+}
+
+.selected {
+  color: white;
+  background-color: var(--text-color);
+}
+
+@media screen and (min-width: 45em) {
+  .filterButton {
+    font-size: 1em;
+  }
+
+  .unselected:hover {
+    background-color: rgb(237, 243, 245);
+  }
+}
