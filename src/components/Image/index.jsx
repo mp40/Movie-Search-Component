@@ -4,9 +4,7 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 const Image = ({ alt, path }) => (
-  <div className="image">
-    <img src={path} alt={alt} />
-  </div>
+  <img src={path} alt={alt} className="image" />
 );
 
 Image.propTypes = {

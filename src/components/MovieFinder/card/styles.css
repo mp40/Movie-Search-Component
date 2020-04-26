@@ -1,5 +1,81 @@
-.movieFinderCard {
+:root {
+  --line-height: 1.4em;
+  --border: 1px solid rgb(215, 223, 229);
+  --text-color: rgb(30, 52, 72);
+}
+
+.movieFinderCardContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  margin: 0 1em;
+  padding: 1em 0;
+  border-bottom: var(--border);
+}
+
+.movieFinderCardContainer:nth-last-of-type(1) {
+  border: none;
+}
+
+.movieFinderCardDetails {
+  margin-left: 0.5em;
+  color: var(--text-color);
+}
+
+.movieFinderCardDetails > h1 {
+  font-size: 0.8em;
+  font-weight: 600;
+  margin: -0.3em 0 0;
+  line-height: var(--line-height);
+  max-height: var(--line-height);
+  overflow: hidden;
+}
+
+.movieFinderCardDetails > h2 {
+  font-size: 0.7em;
+}
+
+.movieFinderCardDetails > h2 > span {
+  display: inline-block;
+}
+
+.movieFinderCardDetails > h2 > span:nth-of-type(1) {
+  border: var(--border);
+  border-radius: 3px;
+  padding: 0.15em 0.35em;
+  margin-right: 0.5em;
+}
+
+.movieFinderCardDetails > p {
+  font-size: 0.6em;
+  line-height: var(--line-height);
+}
+
+.clamp {
+  --max-lines: 5;
+  position: relative;
+  max-height: calc(var(--line-height) * var(--max-lines));
+  overflow: hidden;
+}
+
+.fade {
+  opacity: 0.7;
+}
+
+.midWeight {
+  font-weight: 400;
+}
+
+@media screen and (min-width: 45em) {
+  .movieFinderCardDetails > h1 {
+    font-size: 1.2em;
+  }
+
+  .movieFinderCardDetails > h2 {
+    font-size: 0.9em;
+  }
+
+  .movieFinderCardDetails > p {
+    font-size: 0.85em;
+  }
 }

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import Image from '../../Image';
 
-import mediaTypeText from './data';
+import { mediaTypeText, mediaTypeDateText } from './data';
 
 import './styles.css';
 
@@ -19,22 +19,24 @@ const MovieFinderCard = ({
     if (gender) {
       return gender === 1 ? 'Gender: Female' : 'Gender: Male';
     }
-    return date.replace(/-/g, '/');
+    return `${mediaTypeDateText[mediaType]} ${date.replace(/-/g, '/')}`;
   };
 
   return (
-    <div className="movieFinderCard">
+    <div className="movieFinderCardContainer">
       <Image alt={name} path={`${url}${imagePath}`} />
-      <div>
-        <p>
-          {name}
-          {date && `(${getYear()})`}
-        </p>
-        <p>
-          {mediaTypeText[mediaType]}
-          {getTypeDetails()}
-        </p>
-        <p>{overview}</p>
+      <div className="movieFinderCardDetails">
+        <h1>
+          <span>{name}</span>
+          <span className="fade midWeight">
+            {date && ` (${getYear()})`}
+          </span>
+        </h1>
+        <h2 className="midWeight">
+          <span>{mediaTypeText[mediaType]}</span>
+          <span className="fade">{getTypeDetails()}</span>
+        </h2>
+        <p className="clamp">{overview}</p>
         <p>{voteAverage && `User Score: ${voteAverage * 10}%`}</p>
       </div>
     </div>

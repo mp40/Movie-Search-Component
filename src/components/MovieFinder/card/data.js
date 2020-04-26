@@ -1,7 +1,10 @@
-const mediaTypeText = {
+export const mediaTypeText = {
   movie: 'Movie',
   tv: 'Tv Show',
   person: 'People',
 };
 
-export default mediaTypeText;
+export const mediaTypeDateText = {
+  movie: 'Release date:',
+  tv: 'First air date:',
+};
