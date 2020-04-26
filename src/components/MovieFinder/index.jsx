@@ -13,6 +13,7 @@ import './styles.css';
 
 const MovieFinder = () => {
   const [searchResults, updateSearchResults] = useState(output);
+  // const [activeFilter, updateActiveFilter] = useState('all');
   const [filteredResults, updateFilteredResults] = useState(output);
 
   const handleFilterChange = (filterCategory) => {

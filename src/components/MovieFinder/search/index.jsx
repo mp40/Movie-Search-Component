@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import filterCategories from './data';
+import FilterButtons from './FilterButtons';
+
+import './styles.css';
 
 const MovieFinderSearch = ({ handleSearch, handleFilterChange }) => {
   const [value, updateValue] = useState('');
 
   return (
-    <div>
+    <div className="formContainer">
       <form onSubmit={() => handleSearch()}>
         <input
           type="text"
@@ -16,15 +18,7 @@ const MovieFinderSearch = ({ handleSearch, handleFilterChange }) => {
         />
         <input type="submit" value="Search" />
       </form>
-      {filterCategories.map((category) => (
-        <button
-          type="button"
-          key={category.key}
-          onClick={() => handleFilterChange(category.key)}
-        >
-          {category.value}
-        </button>
-      ))}
+      <FilterButtons handleFilterChange={handleFilterChange} />
     </div>
   );
 };
