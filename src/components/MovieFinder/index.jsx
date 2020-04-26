@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 import MovieFinderSearch from './search';
 import MovieFinderCard from './card';
 
+import Image from '../Image';
+
+import Logo from '../../assets/Logo.svg';
+
 import output from '../../fixtures/output.json';
 
 import './styles.css';
@@ -24,7 +28,8 @@ const MovieFinder = () => {
   return (
     <div className="movieFinderContainer">
       <div className="movieFinderHeader">
-        <h1>The Movie Finder Widget</h1>
+        <Image alt="logo" path={Logo} />
+        {/* <img src={Logo} alt="Logo" /> */}
       </div>
       <MovieFinderSearch
         handleSearch={() => {}}

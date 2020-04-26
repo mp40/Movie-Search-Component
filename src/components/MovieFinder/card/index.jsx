@@ -24,7 +24,7 @@ const MovieFinderCard = ({
 
   return (
     <div className="movieFinderCardContainer">
-      <Image alt={name} path={`${url}${imagePath}`} />
+      <Image alt={name} path={`${url}${imagePath}`} thumbnail />
       <div className="movieFinderCardDetails">
         <h1>
           <span>{name}</span>

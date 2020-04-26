@@ -20,13 +20,6 @@
   background-color: rgb(58, 82, 101);
 }
 
-.movieFinderHeader > h1 {
-  color: white;
-  font-size: 1.5em;
-  font-weight: 600;
-  margin: 0;
-}
-
 @media screen and (min-width: 45em) {
   .movieFinderContainer {
     max-width: 45em;
