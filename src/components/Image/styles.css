@@ -1,0 +1,18 @@
+.image {
+  width: 15rem;
+}
+
+.thumbnail {
+  width: 6em;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 45em) {
+  .thumbnail {
+    width: 9em;
+  }
+
+  .image {
+    width: initial;
+  }
+}
