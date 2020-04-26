@@ -11,17 +11,27 @@
   border: var(--border);
   border-radius: 3px;
   padding: 0.15em 0.35em;
-  font-size: 1em;
+  font-size: 0.9em;
   color: var(--text-color);
   min-width: 3em;
   margin-right: 1em;
 }
 
-.unselected:hover {
-  background-color: rgb(237, 243, 245);
+.unselected {
+  background-color: white;
 }
 
 .selected {
   color: white;
   background-color: var(--text-color);
+}
+
+@media screen and (min-width: 45em) {
+  .filterButton {
+    font-size: 1em;
+  }
+
+  .unselected:hover {
+    background-color: rgb(237, 243, 245);
+  }
 }
