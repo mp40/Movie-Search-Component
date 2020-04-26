@@ -1,16 +1,11 @@
-:root {
-  --blue-grey: #d5dfe6;
-  --border: 1px solid rgb(215, 223, 229);
-  --box-shadow: 0px 0px 5px 1px rgba(215, 223, 229, 0.75);
-}
-
 .movieFinderContainer {
   margin: 1em;
-  border: var(--border);
-  -webkit-box-shadow: var(--box-shadow);
-  -moz-box-shadow: var(--box-shadow);
-  box-shadow: var(--box-shadow);
   border-radius: 3px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid var(--blue-grey);
+  box-shadow: 0px 2px 5px 0 var(--blue-grey-light);
 }
 
 .movieFinderHeader {
@@ -24,7 +19,7 @@
 
 @media screen and (min-width: 47.25em) {
   .movieFinderContainer {
-    width: 47.25em;
+    width: var(--width-large);
     margin: auto;
   }
 }
