@@ -1,4 +1,5 @@
 :root {
+  --blue-grey: #d5dfe6;
   --border: 1px solid rgb(215, 223, 229);
   --box-shadow: 0px 0px 5px 1px rgba(215, 223, 229, 0.75);
 }
@@ -15,14 +16,15 @@
 .movieFinderHeader {
   padding: 1em;
   margin: 0 0 1em;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  background-color: rgb(58, 82, 101);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  background-color: var(--blue-slate-dark);
+  box-shadow: inset 0px -1px 0px 0px var(--blue-grey);
 }
 
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 47.25em) {
   .movieFinderContainer {
-    max-width: 45em;
+    width: 47.25em;
     margin: auto;
   }
 }
