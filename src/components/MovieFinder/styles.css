@@ -23,6 +23,22 @@ B 229
   -webkit-box-shadow: var(--box-shadow);
   -moz-box-shadow: var(--box-shadow);
   box-shadow: var(--box-shadow);
+  border-radius: 3px;
+}
+
+.movieFinderHeader {
+  padding: 1em;
+  margin: 0 0 1em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background-color: rgb(58, 82, 101);
+}
+
+.movieFinderHeader > h1 {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0;
 }
 
 @media screen and (min-width: 45em) {

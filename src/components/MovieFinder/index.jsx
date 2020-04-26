@@ -23,7 +23,9 @@ const MovieFinder = () => {
 
   return (
     <div className="movieFinderContainer">
-      <h1>The Movie Finder Widget</h1>
+      <div className="movieFinderHeader">
+        <h1>The Movie Finder Widget</h1>
+      </div>
       <MovieFinderSearch
         handleSearch={() => {}}
         handleFilterChange={handleFilterChange}
