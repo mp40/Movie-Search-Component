@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Image from '../../Image';
+import UserScore from './UserScore';
 
 import { mediaTypeText, mediaTypeDateText } from './data';
 
@@ -36,8 +37,10 @@ const MovieFinderCard = ({
           <span>{mediaTypeText[mediaType]}</span>
           <span className="fade">{getTypeDetails()}</span>
         </h2>
-        <p className="clamp">{overview}</p>
-        <p>{voteAverage && `User Score: ${voteAverage * 10}%`}</p>
+        <p className="cardText clamp">{overview}</p>
+        {mediaType !== 'person' && (
+        <UserScore voteAverage={voteAverage} />
+        )}
       </div>
     </div>
   );

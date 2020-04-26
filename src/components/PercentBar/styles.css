@@ -1,0 +1,31 @@
+.percentContainer {
+  position: relative;
+}
+
+.percentContainer > div {
+  height: 0.4em;
+  border-radius: 1em;
+}
+
+.percentBar {
+  width: 10em;
+  background-color: rgb(225, 233, 237);
+}
+
+.percentage {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.red {
+  background-color: rgb(222, 78, 71);
+}
+
+.yellow {
+  background-color: rgb(249, 213, 91);
+}
+
+.green {
+  background-color: rgb(132, 181, 60);
+}

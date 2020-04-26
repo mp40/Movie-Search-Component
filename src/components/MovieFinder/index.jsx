@@ -29,7 +29,6 @@ const MovieFinder = () => {
     <div className="movieFinderContainer">
       <div className="movieFinderHeader">
         <Image alt="logo" path={Logo} />
-        {/* <img src={Logo} alt="Logo" /> */}
       </div>
       <MovieFinderSearch
         handleSearch={() => {}}

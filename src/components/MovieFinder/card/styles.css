@@ -20,6 +20,7 @@
 .movieFinderCardDetails {
   margin-left: 0.5em;
   color: var(--text-color);
+  position: relative;
 }
 
 .movieFinderCardDetails > h1 {
@@ -47,8 +48,30 @@
 }
 
 .movieFinderCardDetails > p {
-  font-size: 0.6em;
   line-height: var(--line-height);
+}
+
+.userScore {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.userScore > p {
+  margin: 0 0 0.2em;
+}
+
+.userScore > p > span:nth-of-type(2) {
+  font-size: 0.7em;
+  font-weight: 500;
+}
+
+.userScore > p > span:nth-of-type(2)::before {
+  content: ' ';
+}
+
+.cardText {
+  font-size: 0.6em;
 }
 
 .clamp {
@@ -75,7 +98,11 @@
     font-size: 0.9em;
   }
 
-  .movieFinderCardDetails > p {
+  .userScore > p > span:nth-of-type(2) {
+    font-size: 1.1em;
+  }
+
+  .cardText {
     font-size: 0.85em;
   }
 }

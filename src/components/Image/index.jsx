@@ -17,5 +17,4 @@ Image.defaultProps = {
   thumbnail: false,
 };
 
-
 export default Image;
