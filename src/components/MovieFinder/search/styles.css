@@ -61,30 +61,34 @@
 }
 
 .filterButton {
-  border: var(--border);
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid var(--blue-grey-dark);
   border-radius: 3px;
-  padding: 0.15em 0.35em;
-  font-size: 0.9em;
-  color: var(--text-color);
   min-width: 3em;
   margin-right: 1em;
+  padding: 0.325em;
+  font-size: 0.875em;
+  color: var(--blue-slate-dark);
+  text-align: center;
 }
 
 .unselected {
-  background-color: white;
+  background-color: #fff;
 }
 
 .selected {
-  color: white;
-  background-color: var(--text-color);
+  color: #fff;
+  background-color: var(--blue-ink);
 }
 
 @media screen and (min-width: 45em) {
   .filterButton {
-    font-size: 1em;
+    min-width: 4.6em;
   }
 
   .unselected:hover {
-    background-color: rgb(237, 243, 245);
+    background-color: var(--blue-sky);
   }
 }
