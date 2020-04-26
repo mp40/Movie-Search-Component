@@ -11,8 +11,7 @@
 .movieFinderHeader {
   padding: 1em;
   margin: 0 0 1em;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-radius: 2px 2px 0 0;
   background-color: var(--blue-slate-dark);
   box-shadow: inset 0px -1px 0px 0px var(--blue-grey);
 }
