@@ -23,7 +23,6 @@ const MovieFinderSearch = ({ handleSearch, handleFilterChange }) => {
               type="text"
               value={value}
               placeholder={defaultText}
-              size={50}
               onChange={(event) => updateValue(event.target.value)}
             />
             {value && <button type="button" onClick={() => updateValue('')}>Clear</button>}

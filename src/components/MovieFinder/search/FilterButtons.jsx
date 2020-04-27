@@ -22,7 +22,7 @@ const FilterButtons = ({ handleFilterChange }) => {
           className={`filterButton ${category.key === activeFilter ? 'selected' : 'unselected'}`}
           onClick={() => handleOnClick(category.key)}
         >
-          {category.value}
+          <span>{category.value}</span>
         </button>
       ))}
     </>
