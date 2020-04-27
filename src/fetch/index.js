@@ -21,9 +21,9 @@ export const fetchActorData = async (id) => {
   return response.json();
 };
 
-export const fetchVideoData = async (id) => {
+export const fetchVideoData = async (mediaType, id) => {
   const response = await fetch(
-    `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US`,
+    `https://api.themoviedb.org/3/${mediaType}/${id}/videos?api_key=${API_KEY}&language=en-US`,
   );
   return response.json();
 };
@@ -34,9 +34,28 @@ export const getFilteredResults = async (query) => {
   return Promise.all(
     data.results.map(async (item) => {
       let actorData;
+      let videoData;
+      let trailerData;
 
       if (item.media_type === 'person') {
         actorData = await fetchActorData(item.id);
+      }
+
+      if (item.media_type !== 'person') {
+        videoData = await fetchVideoData(item.mediaType, item.id);
+
+
+        trailerData = videoData.results.reduce((filtered, video) => {
+          if (video.type === 'Trailer') {
+            filtered.push({
+              id: video.id,
+              key: video.key,
+              site: video.site,
+              size: video.size,
+            });
+          }
+          return filtered;
+        }, []);
       }
 
       return {
@@ -46,6 +65,7 @@ export const getFilteredResults = async (query) => {
         date: item.release_date || item.first_air_date,
         name: item.title || item.name,
         voteAverage: item.vote_average,
+        trailers: trailerData || undefined,
         gender: item.gender,
         mediaType: item.media_type,
       };

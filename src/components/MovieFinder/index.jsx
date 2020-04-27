@@ -5,13 +5,13 @@ import MovieFinderCard from './card';
 
 import { ReactComponent as Logo } from '../../assets/Logo.svg';
 
-import output from '../../fixtures/output.json';
+import staticResults from '../../fixtures/staticResults.json';
 
 import './styles.css';
 
 const MovieFinder = () => {
-  const [searchResults, updateSearchResults] = useState(output);
-  const [filteredResults, updateFilteredResults] = useState(output);
+  const [searchResults, updateSearchResults] = useState(staticResults);
+  const [filteredResults, updateFilteredResults] = useState(staticResults);
 
   const handleFilterChange = (filterCategory) => {
     if (filterCategory === 'all') {

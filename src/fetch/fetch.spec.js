@@ -78,8 +78,9 @@ describe('fetching data', () => {
     });
 
     it('should fetch movie video data from API', async () => {
+      const mediaType = 'movie';
       const id = 1337;
-      const data = await fetchVideoData(id);
+      const data = await fetchVideoData(mediaType, id);
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toHaveBeenCalledWith(
         `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US`,
@@ -88,8 +89,9 @@ describe('fetching data', () => {
     });
 
     it('should fetch tv video data from API', async () => {
+      const mediaType = 'tv';
       const id = 1337;
-      const data = await fetchVideoData(id);
+      const data = await fetchVideoData(mediaType, id);
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toHaveBeenCalledWith(
         `https://api.themoviedb.org/3/tv/${id}/videos?api_key=${API_KEY}&language=en-US`,
@@ -100,8 +102,13 @@ describe('fetching data', () => {
 
   describe('geting filtered list', () => {
     beforeEach(() => {
-      global.fetch = jest.fn(() => mockFetchActorPayload)
-        .mockImplementationOnce(() => mockFetchPayload);
+      global.fetch = jest.fn()
+        .mockImplementationOnce(() => mockFetchPayload)
+        .mockImplementationOnce(() => mockFetchVideoPayload)
+        .mockImplementationOnce(() => mockFetchVideoPayload)
+        .mockImplementationOnce(() => mockFetchVideoPayload)
+        .mockImplementationOnce(() => mockFetchActorPayload)
+        .mockImplementationOnce(() => mockFetchActorPayload);
     });
 
     afterEach(() => {
