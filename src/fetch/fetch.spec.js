@@ -2,11 +2,13 @@ import {
   fetchTrending,
   fetchSearchResults,
   fetchActorData,
+  fetchVideoData,
   getFilteredResults,
 } from './index';
 
 import payload from '../fixtures/payload.json';
 import actorPayload from '../fixtures/actorPayload.json';
+import videoPayload from '../fixtures/videoPayload.json';
 import output from '../fixtures/output.json';
 
 const API_KEY = process.env.REACT_APP_MOVIE_DATABASE_API_KEY;
@@ -14,6 +16,7 @@ const API_KEY = process.env.REACT_APP_MOVIE_DATABASE_API_KEY;
 describe('fetching data', () => {
   const mockFetchPayload = Promise.resolve({ json: () => payload });
   const mockFetchActorPayload = Promise.resolve({ json: () => actorPayload });
+  const mockFetchVideoPayload = Promise.resolve({ json: () => videoPayload });
 
 
   describe('fetching list', () => {
@@ -53,6 +56,7 @@ describe('fetching data', () => {
     afterEach(() => {
       global.fetch.mockClear();
     });
+
     it('should fetch actor data from API', async () => {
       const id = 1337;
       const data = await fetchActorData(id);
@@ -61,6 +65,26 @@ describe('fetching data', () => {
         `https://api.themoviedb.org/3/person/${id}?api_key=${API_KEY}&language=en-US`,
       );
       expect(data).toEqual(actorPayload);
+    });
+  });
+
+  describe('fetching videos', () => {
+    beforeEach(() => {
+      global.fetch = jest.fn().mockImplementation(() => mockFetchVideoPayload);
+    });
+
+    afterEach(() => {
+      global.fetch.mockClear();
+    });
+
+    it('should fetch movie video data from API', async () => {
+      const id = 1337;
+      const data = await fetchVideoData(id);
+      expect(global.fetch).toHaveBeenCalledTimes(1);
+      expect(global.fetch).toHaveBeenCalledWith(
+        `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US`,
+      );
+      expect(data).toEqual(videoPayload);
     });
   });
 
