@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 import MovieFinderSearch from './search';
 import MovieFinderCard from './card';
 
-import Image from '../Image';
-
-import Logo from '../../assets/Logo.svg';
+import { ReactComponent as Logo } from '../../assets/Logo.svg';
 
 import output from '../../fixtures/output.json';
 
@@ -28,7 +26,7 @@ const MovieFinder = () => {
   return (
     <div className="movieFinderContainer">
       <div className="movieFinderHeader">
-        <Image alt="logo" path={Logo} />
+        <Logo />
       </div>
       <div className="movieFinderBody">
 
