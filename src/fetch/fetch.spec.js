@@ -11,7 +11,11 @@ import actorPayload from '../fixtures/actorPayload.json';
 import videoPayload from '../fixtures/videoPayload.json';
 import output from '../fixtures/output.json';
 
-const API_KEY = process.env.REACT_APP_MOVIE_DATABASE_API_KEY;
+import {
+  API_BASE_URL, API_TRENDING_URL, API_SEARCH_URL, API_ACTOR_URL,
+} from '../constants';
+
+const API_KEY = `?api_key=${process.env.REACT_APP_MOVIE_DATABASE_API_KEY}`;
 
 describe('fetching data', () => {
   const mockFetchPayload = Promise.resolve({ json: () => payload });
@@ -32,7 +36,7 @@ describe('fetching data', () => {
       const data = await fetchTrending();
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toHaveBeenCalledWith(
-        `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`,
+        `${API_TRENDING_URL}${API_KEY}`,
       );
       expect(data).toEqual(payload);
     });
@@ -42,7 +46,7 @@ describe('fetching data', () => {
       const data = await fetchSearchResults(query);
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toHaveBeenCalledWith(
-        `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&query=${query}&page=1`,
+        `${API_SEARCH_URL}${API_KEY}&language=en-US&query=${query}&page=1`,
       );
       expect(data).toEqual(payload);
     });
@@ -62,7 +66,7 @@ describe('fetching data', () => {
       const data = await fetchActorData(id);
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toHaveBeenCalledWith(
-        `https://api.themoviedb.org/3/person/${id}?api_key=${API_KEY}&language=en-US`,
+        `${API_ACTOR_URL}${id}${API_KEY}&language=en-US`,
       );
       expect(data).toEqual(actorPayload);
     });
@@ -83,7 +87,7 @@ describe('fetching data', () => {
       const data = await fetchVideoData(mediaType, id);
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toHaveBeenCalledWith(
-        `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}&language=en-US`,
+        `${API_BASE_URL}/movie/${id}/videos${API_KEY}&language=en-US`,
       );
       expect(data).toEqual(videoPayload);
     });
@@ -94,7 +98,7 @@ describe('fetching data', () => {
       const data = await fetchVideoData(mediaType, id);
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toHaveBeenCalledWith(
-        `https://api.themoviedb.org/3/tv/${id}/videos?api_key=${API_KEY}&language=en-US`,
+        `${API_BASE_URL}/tv/${id}/videos${API_KEY}&language=en-US`,
       );
       expect(data).toEqual(videoPayload);
     });
