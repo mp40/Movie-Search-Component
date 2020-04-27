@@ -30,22 +30,26 @@ const MovieFinder = () => {
       <div className="movieFinderHeader">
         <Image alt="logo" path={Logo} />
       </div>
-      <MovieFinderSearch
-        handleSearch={() => {}}
-        handleFilterChange={handleFilterChange}
-      />
-      {filteredResults.map((item) => (
-        <MovieFinderCard
-          key={item.id}
-          name={item.name}
-          imagePath={item.imagePath}
-          mediaType={item.mediaType}
-          date={item.date}
-          overview={item.overview}
-          gender={item.gender}
-          voteAverage={item.voteAverage}
+      <div className="movieFinderBody">
+
+
+        <MovieFinderSearch
+          handleSearch={() => {}}
+          handleFilterChange={handleFilterChange}
         />
-      ))}
+        {filteredResults.map((item) => (
+          <MovieFinderCard
+            key={item.id}
+            name={item.name}
+            imagePath={item.imagePath}
+            mediaType={item.mediaType}
+            date={item.date}
+            overview={item.overview}
+            gender={item.gender}
+            voteAverage={item.voteAverage}
+          />
+        ))}
+      </div>
     </div>
   );
 };
