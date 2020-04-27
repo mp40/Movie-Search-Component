@@ -86,6 +86,16 @@ describe('fetching data', () => {
       );
       expect(data).toEqual(videoPayload);
     });
+
+    it('should fetch tv video data from API', async () => {
+      const id = 1337;
+      const data = await fetchVideoData(id);
+      expect(global.fetch).toHaveBeenCalledTimes(1);
+      expect(global.fetch).toHaveBeenCalledWith(
+        `https://api.themoviedb.org/3/tv/${id}/videos?api_key=${API_KEY}&language=en-US`,
+      );
+      expect(data).toEqual(videoPayload);
+    });
   });
 
   describe('geting filtered list', () => {
