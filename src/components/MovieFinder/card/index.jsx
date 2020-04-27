@@ -29,13 +29,13 @@ const MovieFinderCard = ({
       <div className="movieFinderCardDetails">
         <h1>
           <span>{name}</span>
-          <span className="fade midWeight">
+          <span>
             {date && ` (${getYear()})`}
           </span>
         </h1>
-        <h2 className="midWeight">
+        <h2>
           <span>{mediaTypeText[mediaType]}</span>
-          <span className="fade">{getTypeDetails()}</span>
+          <span>{getTypeDetails()}</span>
         </h2>
         <p className="cardText clamp">{overview}</p>
         {mediaType !== 'person' && (
