@@ -17,7 +17,7 @@ const PercentBar = ({ percent }) => {
   return (
     <div className="percentContainer">
       <div className="percentBar" />
-      <div className={`percentage ${getClassName()}`} style={{ width: `${percent / 10}em` }} />
+      <div className={`percentage ${getClassName()}`} style={{ width: `${percent}%` }} />
     </div>
   );
 };

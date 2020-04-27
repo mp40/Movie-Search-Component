@@ -70,6 +70,7 @@
 
 .userScore > p {
   margin: 0 0 0.2em;
+  color: #17344a;
 }
 
 .userScore > p > span:nth-of-type(2) {
@@ -102,7 +103,7 @@
   }
 
   .userScore > p > span:nth-of-type(2) {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   .cardText {
