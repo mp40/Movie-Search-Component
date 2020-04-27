@@ -3,9 +3,7 @@ import React, { useState } from 'react';
 import MovieFinderSearch from './search';
 import MovieFinderCard from './card';
 
-import Image from '../Image';
-
-import Logo from '../../assets/Logo.svg';
+import { ReactComponent as Logo } from '../../assets/Logo.svg';
 
 import output from '../../fixtures/output.json';
 
@@ -28,24 +26,28 @@ const MovieFinder = () => {
   return (
     <div className="movieFinderContainer">
       <div className="movieFinderHeader">
-        <Image alt="logo" path={Logo} />
+        <Logo />
       </div>
-      <MovieFinderSearch
-        handleSearch={() => {}}
-        handleFilterChange={handleFilterChange}
-      />
-      {filteredResults.map((item) => (
-        <MovieFinderCard
-          key={item.id}
-          name={item.name}
-          imagePath={item.imagePath}
-          mediaType={item.mediaType}
-          date={item.date}
-          overview={item.overview}
-          gender={item.gender}
-          voteAverage={item.voteAverage}
+      <div className="movieFinderBody">
+
+
+        <MovieFinderSearch
+          handleSearch={() => {}}
+          handleFilterChange={handleFilterChange}
         />
-      ))}
+        {filteredResults.map((item) => (
+          <MovieFinderCard
+            key={item.id}
+            name={item.name}
+            imagePath={item.imagePath}
+            mediaType={item.mediaType}
+            date={item.date}
+            overview={item.overview}
+            gender={item.gender}
+            voteAverage={item.voteAverage}
+          />
+        ))}
+      </div>
     </div>
   );
 };

@@ -3,13 +3,14 @@
 }
 
 .percentContainer > div {
-  height: 0.4em;
-  border-radius: 1em;
+  height: 0.375em;
+  width: 9.5em;
+  border-radius: 0.188em;
 }
 
 .percentBar {
-  width: 10em;
-  background-color: rgb(225, 233, 237);
+  width: 100%;
+  background-color: var(--blue-grey-light);
 }
 
 .percentage {
@@ -19,13 +20,13 @@
 }
 
 .red {
-  background-color: rgb(222, 78, 71);
+  background-color: #f03e3e;
 }
 
 .yellow {
-  background-color: rgb(249, 213, 91);
+  background-color: #ffd43b;
 }
 
 .green {
-  background-color: rgb(132, 181, 60);
+  background-color: #74b816;
 }

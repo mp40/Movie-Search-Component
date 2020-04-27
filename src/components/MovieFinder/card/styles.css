@@ -1,54 +1,65 @@
-:root {
-  --line-height: 1.4em;
-  --border: 1px solid rgb(215, 223, 229);
-  --text-color: rgb(30, 52, 72);
-}
-
 .movieFinderCardContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  margin: 0 1em;
+  margin: 1em 0 0;
   padding: 1em 0;
-  border-bottom: var(--border);
+  box-shadow: inset 0 1px 0 0 var(--blue-grey);
 }
 
-.movieFinderCardContainer:nth-last-of-type(1) {
-  border: none;
+.movieFinderCardContainer > img {
+  box-shadow: 0 0 32px 0 rgba(23, 52, 74, 0.6);
 }
 
 .movieFinderCardDetails {
-  margin-left: 0.5em;
-  color: var(--text-color);
   position: relative;
+  margin-left: 1em;
+  font-weight: 300;
 }
 
 .movieFinderCardDetails > h1 {
   font-size: 0.8em;
-  font-weight: 600;
-  margin: -0.3em 0 0;
-  line-height: var(--line-height);
-  max-height: var(--line-height);
+  margin: -0.5em 0 0;
+  line-height: 2em;
+  max-height: 2em;
   overflow: hidden;
+  color: var(--blue-ink);
+}
+
+.movieFinderCardDetails > h1 > span:nth-of-type(2) {
+  color: var(--blue-slate);
+  font-weight: 300;
 }
 
 .movieFinderCardDetails > h2 {
-  font-size: 0.7em;
+  height: 1rem;
+  font-size: 0.6em;
+  font-weight: 300;
+  margin: 0;
 }
 
 .movieFinderCardDetails > h2 > span {
   display: inline-block;
+  line-height: 1rem;
 }
 
 .movieFinderCardDetails > h2 > span:nth-of-type(1) {
-  border: var(--border);
-  border-radius: 3px;
-  padding: 0.15em 0.35em;
+  border-radius: 4px;
   margin-right: 0.5em;
+  padding: 0 0.45em;
+  box-sizing: border-box;
+  border: 1px solid var(--blue-grey-dark);
+  color: var(--blue-slate-dark);
+}
+
+.movieFinderCardDetails > h2 > span:nth-of-type(2) {
+  color: var(--blue-slate);
 }
 
 .movieFinderCardDetails > p {
-  line-height: var(--line-height);
+  margin: 1em 0;
+  line-height: 1.25em;
+  color: var(--blue-ink);
 }
 
 .userScore {
@@ -59,6 +70,7 @@
 
 .userScore > p {
   margin: 0 0 0.2em;
+  color: #17344a;
 }
 
 .userScore > p > span:nth-of-type(2) {
@@ -77,29 +89,26 @@
 .clamp {
   --max-lines: 5;
   position: relative;
-  max-height: calc(var(--line-height) * var(--max-lines));
+  max-height: calc(1.25em * var(--max-lines));
   overflow: hidden;
 }
 
-.fade {
-  opacity: 0.7;
-}
-
-.midWeight {
-  font-weight: 400;
-}
-
-@media screen and (min-width: 45em) {
+@media screen and (min-width: 47.25em) {
   .movieFinderCardDetails > h1 {
-    font-size: 1.2em;
+    font-size: 1.25em;
   }
 
   .movieFinderCardDetails > h2 {
-    font-size: 0.9em;
+    font-size: 0.875em;
+    height: 1.5rem;
+  }
+
+  .movieFinderCardDetails > h2 > span {
+    line-height: 1.5rem;
   }
 
   .userScore > p > span:nth-of-type(2) {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
   .cardText {
