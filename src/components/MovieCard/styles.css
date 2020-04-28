@@ -60,29 +60,6 @@
   margin: 1em 0;
   line-height: 1.25em;
   color: var(--blue-ink);
-}
-
-.userScore {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.userScore > p {
-  margin: 0 0 0.2em;
-  color: #17344a;
-}
-
-.userScore > p > span:nth-of-type(2) {
-  font-size: 0.7em;
-  font-weight: 500;
-}
-
-.userScore > p > span:nth-of-type(2)::before {
-  content: ' ';
-}
-
-.cardText {
   font-size: 0.6em;
 }
 
@@ -107,11 +84,13 @@
     line-height: 1.5rem;
   }
 
-  .userScore > p > span:nth-of-type(2) {
-    font-size: 1em;
-  }
-
-  .cardText {
+  .movieFinderCardDetails > p {
     font-size: 0.85em;
+  }
+}
+
+@media screen and (max-width: 47em) {
+  .trailer > button {
+    display: none;
   }
 }

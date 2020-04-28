@@ -1,0 +1,432 @@
+[
+  {
+    "id": 560044,
+    "voteAverage": 8.1,
+    "name": "The Willoughbys",
+    "date": "2020-04-22",
+    "overview": "When the four Willoughby children are abandoned by their selfish parents, they must learn how to adapt their Old-Fashioned values to the contemporary world in order to create something new: The Modern Family.",
+    "imagePath": "/dKgV8T3inB5EnVDg0Jeh2L6ttQ9.jpg",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "mediaType": "movie"
+  },
+  {
+    "id": 632931,
+    "voteAverage": 5.9,
+    "name": "The Silence of the Marsh",
+    "date": "2019-11-15",
+    "overview": "A successful, cold-blooded crime novelist gets involved in a kidnapping case while uncovering the corrupt ties between politicians and the local mafia in Valencia, Spain.",
+    "imagePath": "/j2XqOzRU1uVOzqwIsdasGFjjf5q.jpg",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "mediaType": "movie"
+  },
+  {
+    "id": 71446,
+    "name": "Money Heist",
+    "voteAverage": 8.5,
+    "date": "2017-05-02",
+    "imagePath": "/MoEKaPFHABtA1xKoOteirGaHl1.jpg",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "overview": "To carry out the biggest heist in history, a mysterious man called The Professor recruits a band of eight robbers who have a single characteristic: none of them has anything to lose. Five months of seclusion - memorizing every step, every detail, every probability - culminate in eleven days locked up in the National Coinage and Stamp Factory of Spain, surrounded by police forces and with dozens of hostages in their power, to find out whether their suicide wager will lead to everything or nothing.",
+    "mediaType": "tv"
+  },
+  {
+    "id": 181812,
+    "overview": "The surviving Resistance faces the First Order once again as the journey of Rey, Finn and Poe Dameron continues. With the power and knowledge of generations behind them, the final battle begins.",
+    "imagePath": "/db32LaOibwEliAmSL2jjDF6oDdj.jpg",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "date": "2019-12-18",
+    "name": "Star Wars: The Rise of Skywalker",
+    "voteAverage": 6.5,
+    "mediaType": "movie"
+  },
+  {
+    "id": 38700,
+    "voteAverage": 7.2,
+    "name": "Bad Boys for Life",
+    "date": "2020-01-15",
+    "overview": "Marcus and Mike are forced to confront new threats, career changes, and midlife crises as they join the newly created elite team AMMO of the Miami police department to take down the ruthless Armando Armas, the vicious leader of a Miami drug cartel.",
+    "imagePath": "/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "mediaType": "movie"
+  },
+  {
+    "id": 454626,
+    "voteAverage": 7.6,
+    "name": "Sonic the Hedgehog",
+    "date": "2020-02-12",
+    "imagePath": "/aQvJ5WPzZgYVDrxLX4R6cLJCEaQ.jpg",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "overview": "Based on the global blockbuster videogame franchise from Sega, Sonic the Hedgehog tells the story of the world’s speediest hedgehog as he embraces his new home on Earth. In this live-action adventure comedy, Sonic and his new best friend team up to defend the planet from the evil genius Dr. Robotnik and his plans for world domination.",
+    "mediaType": "movie"
+  },
+  {
+    "id": 79525,
+    "name": "The Last Dance",
+    "voteAverage": 9.5,
+    "date": "2020-04-19",
+    "imagePath": "/5eoeVwsQg35GJfARq7Azdwrzztl.jpg",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "overview": "A 10-part documentary chronicling the untold story of Michael Jordan and the Chicago Bulls dynasty with rare, never-before-seen footage and sound from the 1997-98 championship season – plus over 100 interviews with famous figures and basketball’s biggest names.",
+    "mediaType": "tv"
+  },
+  {
+    "id": 443791,
+    "voteAverage": 6.4,
+    "name": "Underwater",
+    "date": "2020-01-08",
+    "overview": "After an earthquake destroys their underwater station, six researchers must navigate two miles along the dangerous, unknown depths of the ocean floor to make it to safety in a race against time.",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "imagePath": "/gzlbb3yeVISpQ3REd3Ga1scWGTU.jpg",
+    "mediaType": "movie"
+  },
+  {
+    "id": 512200,
+    "voteAverage": 6.9,
+    "name": "Jumanji: The Next Level",
+    "date": "2019-12-04",
+    "overview": "As the gang return to Jumanji to rescue one of their own, they discover that nothing is as they expect. The players will have to brave parts unknown and unexplored in order to escape the world’s most dangerous game.",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "imagePath": "/bB42KDdfWkOvmzmYkmK58ZlCa9P.jpg",
+    "mediaType": "movie"
+  },
+  {
+    "id": 664767,
+    "voteAverage": 8.5,
+    "name": "Mortal Kombat Legends: Scorpion’s Revenge",
+    "date": "2020-04-12",
+    "overview": "After the vicious slaughter of his family by stone-cold mercenary Sub-Zero, Hanzo Hasashi is exiled to the torturous Netherrealm. There, in exchange for his servitude to the sinister Quan Chi, he’s given a chance to avenge his family – and is resurrected as Scorpion, a lost soul bent on revenge. Back on Earthrealm, Lord Raiden gathers a team of elite warriors – Shaolin monk Liu Kang, Special Forces officer Sonya Blade and action star Johnny Cage – an unlikely band of heroes with one chance to save humanity. To do this, they must defeat Shang Tsung’s horde of Outworld gladiators and reign over the Mortal Kombat tournament.",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "imagePath": "/4VlXER3FImHeFuUjBShFamhIp9M.jpg",
+    "mediaType": "movie"
+  },
+  {
+    "id": 530915,
+    "voteAverage": 7.9,
+    "name": "1917",
+    "date": "2019-12-25",
+    "overview": "At the height of the First World War, two young British soldiers must cross enemy territory and deliver a message that will stop a deadly attack on hundreds of soldiers.",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "imagePath": "/AuGiPiGMYMkSosOJ3BQjDEAiwtO.jpg",
+    "mediaType": "movie"
+  },
+  {
+    "id": 448119,
+    "voteAverage": 6.8,
+    "name": "Dolittle",
+    "date": "2020-01-01",
+    "overview": "After losing his wife seven years earlier, the eccentric Dr. John Dolittle, famed doctor and veterinarian of Queen Victoria’s England, hermits himself away behind the high walls of Dolittle Manor with only his menagerie of exotic animals for company. But when the young queen falls gravely ill, a reluctant Dolittle is forced to set sail on an epic adventure to a mythical island in search of a cure, regaining his wit and courage as he crosses old adversaries and discovers wondrous creatures.",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "imagePath": "/xnjvwfDulnOCy8qtYX0iqydmMhk.jpg",
+    "mediaType": "movie"
+  },
+  {
+    "id": 539537,
+    "voteAverage": 5.7,
+    "name": "Fantasy Island",
+    "date": "2020-02-12",
+    "overview": "A group of contest winners arrive at an island hotel to live out their dreams, only to find themselves trapped in nightmare scenarios.",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "imagePath": "/rbrvkNWDyF1NKzvAlIHepFBSBJq.jpg",
+    "mediaType": "movie"
+  },
+  {
+    "id": 466622,
+    "voteAverage": 5.7,
+    "name": "The Rhythm Section",
+    "date": "2020-01-31",
+    "overview": "After the death of her family in an airplane crash on a flight that she was meant to be on, Stephanie Patrick discovers the crash was not an accident. She then seeks to uncover the truth by adapting the identity of an assassin to track down those responsible.",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "imagePath": "/jjLcdF5ZLWHho96jTbUrJCpzztD.jpg",
+    "mediaType": "movie"
+  },
+  {
+    "id": 495764,
+    "voteAverage": 7.2,
+    "name": "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn)",
+    "date": "2020-02-05",
+    "overview": "Harley Quinn joins forces with a singer, an assassin and a police detective to help a young girl who had a hit placed on her after she stole a rare diamond from a crime lord.",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "imagePath": "/h4VB6m0RwcicVEZvzftYZyKXs6K.jpg",
+    "mediaType": "movie"
+  },
+  {
+    "id": 653744,
+    "voteAverage": 7,
+    "name": "Sergio",
+    "date": "2020-04-17",
+    "overview": "A sweeping drama set in the chaotic aftermath of the US invasion of Iraq, where the life of top UN diplomat Sergio Vieira de Mello hangs in the balance during the most treacherous mission of his career.",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "imagePath": "/jgLlp0jF1EDG8N1rAulAUlv9pL6.jpg",
+    "mediaType": "movie"
+  },
+  {
+    "id": 338762,
+    "voteAverage": 7.2,
+    "name": "Bloodshot",
+    "date": "2020-03-05",
+    "overview": "After he and his wife are murdered, marine Ray Garrison is resurrected by a team of scientists. Enhanced with nanotechnology, he becomes a superhuman, biotech killing machine—'Bloodshot'. As Ray first trains with fellow super-soldiers, he cannot recall anything from his former life. But when his memories flood back and he remembers the man that killed both him and his wife, he breaks out of the facility to get revenge, only to discover that there's more to the conspiracy than he thought.",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "imagePath": "/8WUVHemHFH2ZIP6NWkwlHWsyrEL.jpg",
+    "mediaType": "movie"
+  },
+  {
+    "id": 299534,
+    "overview": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+    "trailers": [
+      {
+        "id": "572003f992514121f30003c6",
+        "key": "BpJYNVhGf1s",
+        "site": "YouTube",
+        "size": 720
+      },
+      {
+        "id": "55311e34c3a368411700235c",
+        "key": "iGp_N3Ir7Do",
+        "site": "YouTube",
+        "size": 720
+      }
+    ],
+    "imagePath": "/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    "date": "2019-04-24",
+    "name": "Avengers: Endgame",
+    "voteAverage": 8.3,
+    "mediaType": "movie"
+  },
+  {
+    "id": 3149,
+    "imagePath": "/8I6r4ou9H9zJPWXBZebiWn1EuoX.jpg",
+    "name": "Marilyn Monroe",
+    "overview": "An American actor, producer, director, and fashion designer. Over the last 30 years of his career, Malkovich has appeared in more than 70 motion pictures. For his roles in Places in the Heart and In the Line of Fire, he received Academy Award nominations. He has also appeared in well-received films such as Empire of the Sun, The Killing Fields, Dangerous Liaisons, Of Mice and Men, Being John Malkovich, Burn After Reading, RED, and Warm Bodies, as well as producing numerous films, including Juno and The Perks of Being a Wallflower. Malkovich attended exclusively Illinois schools throughout his childhood and into adulthood, building a community of like-minded performers such as Joan Allen, Gary Sinise and Glenne Headly, all of whom co-founded the Steppenwolf Theatre Company in 1976.  After appearing in numerous stage productions, Malkovich began acting in feature films in the late 1970s, garnering critical acclaim for his numerous dramatic and comedic roles in films such as Dangerous Liasions, Of Mice and Men, Being John Malkovich, and Burn After Reading.   In keeping with his renaissance-man image, he created his own fashion company, Mrs. Mudd, in 2002.  Malkovich continues to act, direct and produce numerous movies per year, and is considered one of the most influential voices in modern cinema.",
+    "gender": 1,
+    "mediaType": "person"
+  },
+  {
+    "id": 287,
+    "imagePath": "/tJiSUYst4ddIaz1zge2LqCtu9tw.jpg",
+    "name": "Brad Pitt",
+    "overview": "An American actor, producer, director, and fashion designer. Over the last 30 years of his career, Malkovich has appeared in more than 70 motion pictures. For his roles in Places in the Heart and In the Line of Fire, he received Academy Award nominations. He has also appeared in well-received films such as Empire of the Sun, The Killing Fields, Dangerous Liaisons, Of Mice and Men, Being John Malkovich, Burn After Reading, RED, and Warm Bodies, as well as producing numerous films, including Juno and The Perks of Being a Wallflower. Malkovich attended exclusively Illinois schools throughout his childhood and into adulthood, building a community of like-minded performers such as Joan Allen, Gary Sinise and Glenne Headly, all of whom co-founded the Steppenwolf Theatre Company in 1976.  After appearing in numerous stage productions, Malkovich began acting in feature films in the late 1970s, garnering critical acclaim for his numerous dramatic and comedic roles in films such as Dangerous Liasions, Of Mice and Men, Being John Malkovich, and Burn After Reading.   In keeping with his renaissance-man image, he created his own fashion company, Mrs. Mudd, in 2002.  Malkovich continues to act, direct and produce numerous movies per year, and is considered one of the most influential voices in modern cinema.",
+    "gender": 2,
+    "mediaType": "person"
+  }
+]

@@ -1,27 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-import MovieFinderSearch from './search';
-import MovieFinderCard from './card';
+import MovieCard from '../MovieCard';
+import SearchBar from '../SearchBar';
+import ToggleButtons from '../ToggleButtons';
 
 import { ReactComponent as Logo } from '../../assets/Logo.svg';
 
-import output from '../../fixtures/output.json';
+import { getFilteredTrending, fetchTrending } from '../../fetch';
+
+import { defaultSearchText, filterCategories } from './data';
+
+import staticResults from '../../fixtures/staticResults.json';
 
 import './styles.css';
 
 const MovieFinder = () => {
-  const [searchResults, updateSearchResults] = useState(output);
-  const [filteredResults, updateFilteredResults] = useState(output);
+  const [trendingResults, updateTrendingResults] = useState(null);
+  const [searchResults, updateSearchResults] = useState(null);
+  const [media, updateMedia] = useState(null);
 
-  const handleFilterChange = (filterCategory) => {
+  useEffect(() => {
+    // getFilteredTrending().then((data) => {
+    //   if (trendingResults) {
+    //     return;
+    //   }
+    //   updateTrendingResults(data);
+    //   updateMedia(data);
+    // });
+    if (trendingResults) {
+      return;
+    }
+    updateTrendingResults(staticResults);
+    updateSearchResults(staticResults);
+    updateMedia(staticResults);
+  }, [trendingResults]);
+
+  const handleCategoryToggle = (filterCategory) => {
     if (filterCategory === 'all') {
-      updateFilteredResults(searchResults);
+      updateMedia(searchResults);
     } else {
-      updateFilteredResults(() => searchResults
-        .filter((item) => item.mediaType === filterCategory));
+      updateMedia(() =>
+        searchResults.filter((item) => item.mediaType === filterCategory)
+      );
     }
   };
-
 
   return (
     <div className="movieFinderContainer">
@@ -29,24 +51,25 @@ const MovieFinder = () => {
         <Logo />
       </div>
       <div className="movieFinderBody">
-
-
-        <MovieFinderSearch
-          handleSearch={() => {}}
-          handleFilterChange={handleFilterChange}
+        <SearchBar defaultText={defaultSearchText} handleSearch={() => {}} />
+        <ToggleButtons
+          categories={filterCategories}
+          handleCategoryToggle={handleCategoryToggle}
         />
-        {filteredResults.map((item) => (
-          <MovieFinderCard
-            key={item.id}
-            name={item.name}
-            imagePath={item.imagePath}
-            mediaType={item.mediaType}
-            date={item.date}
-            overview={item.overview}
-            gender={item.gender}
-            voteAverage={item.voteAverage}
-          />
-        ))}
+        {media &&
+          media.map((item) => (
+            <MovieCard
+              key={item.id}
+              name={item.name}
+              imagePath={item.imagePath}
+              mediaType={item.mediaType}
+              date={item.date}
+              overview={item.overview}
+              gender={item.gender}
+              voteAverage={item.voteAverage}
+              trailers={item.trailers}
+            />
+          ))}
       </div>
     </div>
   );
