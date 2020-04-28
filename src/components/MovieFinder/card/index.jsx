@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import YouTube from 'react-youtube';
 
 import Image from '../../Image';
 import UserScore from './UserScore';
@@ -8,9 +7,9 @@ import Trailer from './Trailer';
 
 import { mediaTypeText, mediaTypeDateText } from './data';
 
-import './styles.css';
+import { API_IMAGE_URL } from '../../../constants';
 
-const url = 'https://image.tmdb.org/t/p/w200';
+import './styles.css';
 
 const MovieFinderCard = ({
   name,
@@ -33,7 +32,7 @@ const MovieFinderCard = ({
 
   return (
     <div className="movieFinderCardContainer">
-      <Image alt={name} path={`${url}${imagePath}`} thumbnail />
+      <Image alt={name} path={`${API_IMAGE_URL}${imagePath}`} thumbnail />
       <div className="movieFinderCardDetails">
         <h1>
           <span>{name}</span>
@@ -47,7 +46,7 @@ const MovieFinderCard = ({
         {mediaType !== 'person' && (
           <>
             <UserScore voteAverage={voteAverage} />
-            <Trailer trailers={trailers} />
+            <Trailer trailer={trailers[0]} />
           </>
         )}
       </div>
@@ -63,12 +62,14 @@ MovieFinderCard.propTypes = {
   overview: PropTypes.string.isRequired,
   gender: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
   voteAverage: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
+  trailers: PropTypes.arrayOf(PropTypes.object),
 };
 
 MovieFinderCard.defaultProps = {
   date: false,
   gender: false,
   voteAverage: false,
+  trailers: [],
 };
 
 export default MovieFinderCard;

@@ -87,23 +87,35 @@
   bottom: 0;
   right: 0;
   height: 32px;
-  width: 120px;
+  width: auto;
   padding: 0 14px;
   border-radius: 1.469em;
   font-size: 0.875em;
-  color: #fff;
-  background-color: #82c91e;
   border: none;
   display: flex;
   align-items: center;
 }
 
-.trailer > button:hover {
+.trailer > button > span {
+  margin-left: 10px;
+}
+
+.trailerAvailable {
+  color: #fff;
+  background-color: #82c91e;
+}
+
+.trailerAvailable:hover {
   background-color: #66a80f;
 }
 
-.trailer > button > span {
-  margin-left: 10px;
+.trailerUnavailable {
+  background-color: #d5dfe6;
+  color: #527187;
+}
+
+.trailerUnavailable * #Path {
+  fill: #527187;
 }
 
 .trailer > div > iframe {

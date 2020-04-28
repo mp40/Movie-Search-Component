@@ -6,15 +6,32 @@ import { ReactComponent as Play } from '../../../assets/Play.svg';
 
 import './styles.css';
 
-const Trailer = ({ trailers }) => {
+const Trailer = ({ trailer }) => {
   const [showTrailer, toggleTrailer] = useState(false);
-  const trailer = trailers[0];
+
+  const handleToggleOn = () => {
+    if (!trailer) {
+      return;
+    }
+    toggleTrailer(true);
+  };
+
+  const getButtonText = () => {
+    if (!trailer) {
+      return 'Trailer Unavailable';
+    }
+    return 'Play Trailer';
+  };
 
   return (
     <div className="trailer">
-      <button type="button" onClick={() => toggleTrailer(true)}>
+      <button
+        type="button"
+        className={`${trailer ? 'trailerAvailable' : 'trailerUnavailable'}`}
+        onClick={() => handleToggleOn()}
+      >
         <Play />
-        <span>Play Trailer</span>
+        <span>{getButtonText()}</span>
       </button>
       {showTrailer && (
         <YouTube
@@ -28,10 +45,14 @@ const Trailer = ({ trailers }) => {
 };
 
 Trailer.propTypes = {
-  trailers: PropTypes.oneOfType([
+  trailer: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.object),
     PropTypes.bool,
-  ]).isRequired,
+  ]),
+};
+
+Trailer.defaultProps = {
+  trailer: false,
 };
 
 export default Trailer;

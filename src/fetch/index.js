@@ -1,33 +1,34 @@
 import {
-  API_BASE_URL, API_TRENDING_URL, API_SEARCH_URL, API_ACTOR_URL,
+  API_BASE_URL,
+  API_TRENDING_URL,
+  API_SEARCH_URL,
+  API_ACTOR_URL,
 } from '../constants';
 
 const API_KEY = `?api_key=${process.env.REACT_APP_MOVIE_DATABASE_API_KEY}`;
 
 export const fetchTrending = async () => {
-  const response = await fetch(
-    `${API_TRENDING_URL}${API_KEY}`,
-  );
+  const response = await fetch(`${API_TRENDING_URL}${API_KEY}`);
   return response.json();
 };
 
 export const fetchSearchResults = async (query) => {
   const response = await fetch(
-    `${API_SEARCH_URL}${API_KEY}&language=en-US&query=${query}&page=1`,
+    `${API_SEARCH_URL}${API_KEY}&language=en-US&query=${query}&page=1`
   );
   return response.json();
 };
 
 export const fetchActorData = async (id) => {
   const response = await fetch(
-    `${API_ACTOR_URL}${id}${API_KEY}&language=en-US`,
+    `${API_ACTOR_URL}${id}${API_KEY}&language=en-US`
   );
   return response.json();
 };
 
 export const fetchVideoData = async (mediaType, id) => {
   const response = await fetch(
-    `${API_BASE_URL}/${mediaType}/${id}/videos${API_KEY}&language=en-US`,
+    `${API_BASE_URL}/${mediaType}/${id}/videos${API_KEY}&language=en-US`
   );
   return response.json();
 };
@@ -49,7 +50,7 @@ export const getFilteredResults = async (query) => {
         videoData = await fetchVideoData(item.mediaType, item.id);
 
         trailerData = videoData.results.reduce((filtered, video) => {
-          if (video.type === 'Trailer') {
+          if (video.type === 'Trailer' && video.site === 'YouTube') {
             filtered.push({
               id: video.id,
               key: video.key,
@@ -72,6 +73,6 @@ export const getFilteredResults = async (query) => {
         gender: item.gender,
         mediaType: item.media_type,
       };
-    }),
+    })
   );
 };
