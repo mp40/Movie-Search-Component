@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Image from '../../Image';
 import UserScore from './UserScore';
+import Trailer from './Trailer';
 
 import { mediaTypeText, mediaTypeDateText } from './data';
 
@@ -12,7 +13,7 @@ const url = 'https://image.tmdb.org/t/p/w200';
 
 
 const MovieFinderCard = ({
-  name, imagePath, mediaType, date, overview, gender, voteAverage,
+  name, imagePath, mediaType, date, overview, gender, voteAverage, trailers,
 }) => {
   const getYear = () => date.substring(0, 4);
 
@@ -39,7 +40,10 @@ const MovieFinderCard = ({
         </h2>
         <p className="cardText clamp">{overview}</p>
         {mediaType !== 'person' && (
-        <UserScore voteAverage={voteAverage} />
+        <>
+          <UserScore voteAverage={voteAverage} />
+          <Trailer trailers={trailers} />
+        </>
         )}
       </div>
     </div>

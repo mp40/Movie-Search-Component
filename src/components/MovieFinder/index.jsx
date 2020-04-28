@@ -45,6 +45,7 @@ const MovieFinder = () => {
             overview={item.overview}
             gender={item.gender}
             voteAverage={item.voteAverage}
+            trailers={item.trailers}
           />
         ))}
       </div>
