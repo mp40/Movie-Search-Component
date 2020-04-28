@@ -106,7 +106,7 @@
   margin-left: 10px;
 }
 
-.trailer > iframe {
+.trailer > div > iframe {
   position: absolute;
   top: 0;
   left: 0;

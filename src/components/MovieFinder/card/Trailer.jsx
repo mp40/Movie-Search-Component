@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import YouTube from 'react-youtube';
 
 import { ReactComponent as Play } from '../../../assets/Play.svg';
 
@@ -7,6 +8,7 @@ import './styles.css';
 
 const Trailer = ({ trailers }) => {
   const [showTrailer, toggleTrailer] = useState(false);
+  const trailer = trailers[0];
 
   return (
     <div className="trailer">
@@ -15,12 +17,12 @@ const Trailer = ({ trailers }) => {
         <span>Play Trailer</span>
       </button>
       {showTrailer && (
-      <iframe
-        title={trailers[0].key}
-        src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1"
-      />
+        <YouTube
+          videoId={trailer.key}
+          opts={{ playerVars: { autoplay: 1 } }}
+          onEnd={() => toggleTrailer(false)}
+        />
       )}
-
     </div>
   );
 };
