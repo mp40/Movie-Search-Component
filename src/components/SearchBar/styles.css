@@ -1,4 +1,4 @@
-.formContainer > form {
+.searchBarForm {
   margin: 0 0 1em;
 }
 
@@ -68,43 +68,7 @@
   font-size: 0.75em;
 }
 
-.filterButton {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: 1px solid var(--blue-grey-dark);
-  border-radius: 3px;
-  min-width: 3em;
-  margin-right: 1em;
-  padding: 0 0.25em;
-  height: 1.75em;
-  font-size: 0.875em;
-  color: var(--blue-slate-dark);
-  text-align: center;
-}
-
-.filterButton:last-of-type {
-  margin-right: 0;
-}
-
-.unselected {
-  background-color: #fff;
-}
-
-.selected {
-  color: #fff;
-  background-color: var(--blue-ink);
-}
-
 @media screen and (min-width: 45em) {
-  .filterButton {
-    min-width: 4.6em;
-  }
-
-  .unselected:hover {
-    background-color: var(--blue-sky);
-  }
-
   .inputContainer > input {
     font-size: 0.875em;
   }

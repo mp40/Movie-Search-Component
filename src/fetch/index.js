@@ -33,9 +33,7 @@ export const fetchVideoData = async (mediaType, id) => {
   return response.json();
 };
 
-export const getFilteredResults = async (query) => {
-  const data = await fetchSearchResults(query);
-
+const fetchAdditionalData = (data) => {
   return Promise.all(
     data.results.map(async (item) => {
       let actorData;
@@ -47,9 +45,8 @@ export const getFilteredResults = async (query) => {
       }
 
       if (item.media_type !== 'person') {
-        videoData = await fetchVideoData(item.mediaType, item.id);
-
-        trailerData = videoData.results.reduce((filtered, video) => {
+        videoData = await fetchVideoData(item.media_type, item.id);
+        trailerData = videoData?.results.reduce((filtered, video) => {
           if (video.type === 'Trailer' && video.site === 'YouTube') {
             filtered.push({
               id: video.id,
@@ -75,4 +72,16 @@ export const getFilteredResults = async (query) => {
       };
     })
   );
+};
+
+export const getFilteredResults = async (query) => {
+  const data = await fetchSearchResults(query);
+
+  return fetchAdditionalData(data);
+};
+
+export const getFilteredTrending = async () => {
+  const data = await fetchTrending();
+
+  return fetchAdditionalData(data);
 };

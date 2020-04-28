@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import YouTube from 'react-youtube';
 
-import { ReactComponent as Play } from '../../../assets/Play.svg';
+import { ReactComponent as Play } from '../../assets/Play.svg';
 
 import './styles.css';
 
@@ -46,7 +46,7 @@ const Trailer = ({ trailer }) => {
 
 Trailer.propTypes = {
   trailer: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.object),
+    PropTypes.object,
     PropTypes.bool,
   ]),
 };
