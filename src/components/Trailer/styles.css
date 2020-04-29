@@ -26,12 +26,12 @@
 }
 
 .trailerUnavailable {
-  background-color: #d5dfe6;
-  color: #527187;
+  background-color: var(--blue-grey-light);
+  color: var(--blue-slate);
 }
 
 .trailerUnavailable * #Path {
-  fill: #527187;
+  fill: var(--blue-slate);
 }
 
 .trailer > div > iframe {
@@ -42,4 +42,22 @@
   height: 100%;
   border: none;
   box-shadow: 0 0 32px 0 rgba(23, 52, 74, 0.6);
+}
+
+@media screen and (max-width: 47em) {
+  .trailer > button {
+    height: 20px;
+    padding: 0 10px;
+    font-size: 0.7em;
+  }
+
+  .trailer > button > span {
+    margin-left: 6px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .trailer > button {
+    display: none;
+  }
 }

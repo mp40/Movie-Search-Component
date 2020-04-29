@@ -3,7 +3,6 @@
   flex-direction: row;
   flex-wrap: nowrap;
   padding: 1.5em 0;
-  box-shadow: inset 0 1px 0 0 var(--blue-grey);
 }
 
 .movieFinderCardContainer > img,
@@ -37,11 +36,12 @@
   font-size: 0.6em;
   font-weight: 300;
   margin: 0;
+  overflow: hidden;
 }
 
 .movieFinderCardDetails > h2 > span {
   display: inline-block;
-  line-height: 1rem;
+  line-height: 0.9rem;
 }
 
 .movieFinderCardDetails > h2 > span:nth-of-type(1) {
@@ -79,6 +79,7 @@
   .movieFinderCardDetails > h2 {
     font-size: 0.875em;
     height: 1.5rem;
+    overflow: visible;
   }
 
   .movieFinderCardDetails > h2 > span {
@@ -87,11 +88,5 @@
 
   .movieFinderCardDetails > p {
     font-size: 0.85em;
-  }
-}
-
-@media screen and (max-width: 47em) {
-  .trailer > button {
-    display: none;
   }
 }
