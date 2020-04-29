@@ -12,6 +12,8 @@ import { defaultSearchText, filterCategories } from './data';
 
 import './styles.css';
 
+const CACHE = {};
+
 const MovieFinder = () => {
   const [trendingResults, setTrendingResults] = useState(null);
   const [searchResults, setSearchResults] = useState(null);
@@ -30,9 +32,17 @@ const MovieFinder = () => {
   }, [trendingResults]);
 
   const handleSearch = (query) => {
+    if (CACHE[query]) {
+      setSearchResults(CACHE[query]);
+      setMedia(CACHE[query]);
+      return;
+    }
+
+    CACHE[query] = undefined;
     getFilteredResults(query).then((data) => {
       setSearchResults(data);
       setMedia(data);
+      CACHE[query] = data;
     });
   };
 
