@@ -38,7 +38,6 @@ const MovieFinder = () => {
       return;
     }
 
-    CACHE[query] = undefined;
     getFilteredResults(query).then((data) => {
       setSearchResults(data);
       setMedia(data);
