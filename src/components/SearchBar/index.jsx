@@ -7,12 +7,17 @@ import searchIcon from '../../assets/searchIcon.svg';
 
 import './styles.css';
 
-const SearchBar = ({ defaultText, handleSearch }) => {
+const SearchBar = ({ defaultText, handleSearch, handleReset }) => {
   const [value, updateValue] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
     handleSearch(value);
+  };
+
+  const handleClear = () => {
+    updateValue('');
+    handleReset();
   };
 
   return (
@@ -27,7 +32,7 @@ const SearchBar = ({ defaultText, handleSearch }) => {
             onChange={(event) => updateValue(event.target.value)}
           />
           {value && (
-            <button type="button" onClick={() => updateValue('')}>
+            <button type="button" onClick={() => handleClear()}>
               Clear
             </button>
           )}
@@ -41,6 +46,7 @@ const SearchBar = ({ defaultText, handleSearch }) => {
 SearchBar.propTypes = {
   defaultText: PropTypes.string,
   handleSearch: PropTypes.func.isRequired,
+  handleReset: PropTypes.func.isRequired,
 };
 
 SearchBar.defaultProps = {

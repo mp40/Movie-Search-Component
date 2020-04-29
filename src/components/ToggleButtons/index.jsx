@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import './styles.css';
 
-const ToggleButtons = ({ categories, handleCategoryToggle }) => {
-  const [activeCategory, updateActiveCategory] = useState('all');
-
+const ToggleButtons = ({ value, categories, handleCategoryToggle }) => {
   const handleOnClick = (category) => {
-    updateActiveCategory(category);
     handleCategoryToggle(category);
   };
 
@@ -18,7 +15,7 @@ const ToggleButtons = ({ categories, handleCategoryToggle }) => {
           type="button"
           key={category.key}
           className={`toggleButton ${
-            category.key === activeCategory ? 'selected' : 'unselected'
+            category.key === value ? 'selected' : 'unselected'
           }`}
           onClick={() => handleOnClick(category.key)}
         >
@@ -30,6 +27,7 @@ const ToggleButtons = ({ categories, handleCategoryToggle }) => {
 };
 
 ToggleButtons.propTypes = {
+  value: PropTypes.string.isRequired,
   categories: PropTypes.arrayOf(PropTypes.object).isRequired,
   handleCategoryToggle: PropTypes.func.isRequired,
 };

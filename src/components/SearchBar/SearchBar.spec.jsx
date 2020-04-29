@@ -4,9 +4,12 @@ import SearchBar from './index';
 
 describe('MovieFinder search input', () => {
   const handleSearch = jest.fn();
+  const handleReset = jest.fn();
   const event = { preventDefault: () => {} };
 
-  const wrapper = shallow(<SearchBar handleSearch={handleSearch} />);
+  const wrapper = shallow(
+    <SearchBar handleSearch={handleSearch} handleReset={handleReset} />
+  );
 
   afterEach(() => {
     jest.clearAllMocks();
@@ -21,5 +24,10 @@ describe('MovieFinder search input', () => {
     const form = wrapper.find('form');
     form.simulate('submit', event);
     expect(handleSearch).toHaveBeenCalledWith('Biggles');
+  });
+  it('should clear query when clear button clicked', () => {
+    wrapper.find('button').simulate('click');
+    expect(wrapper.find('input').at(0).props().value).toBe('');
+    expect(handleReset).toHaveBeenCalled();
   });
 });

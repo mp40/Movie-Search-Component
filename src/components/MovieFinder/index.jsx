@@ -19,9 +19,10 @@ import staticResults from '../../fixtures/staticResults.json';
 import './styles.css';
 
 const MovieFinder = () => {
-  const [trendingResults, updateTrendingResults] = useState(null);
-  const [searchResults, updateSearchResults] = useState(null);
-  const [media, updateMedia] = useState(null);
+  const [trendingResults, setTrendingResults] = useState(null);
+  const [searchResults, setSearchResults] = useState(null);
+  const [filter, setFilter] = useState('all');
+  const [media, setMedia] = useState(null);
 
   useEffect(() => {
     // getFilteredTrending().then((data) => {
@@ -31,33 +32,42 @@ const MovieFinder = () => {
     //   updateTrendingResults(data);
     //   updateMedia(data);
     // });
+
     if (trendingResults) {
       return;
     }
-    updateTrendingResults(staticResults);
-    updateMedia(staticResults);
+
+    setTrendingResults(staticResults);
+    setMedia(staticResults);
   }, [trendingResults]);
 
   const handleSearch = (query) => {
     getFilteredResults(query).then((data) => {
-      updateSearchResults(data);
-      updateMedia(data);
+      setSearchResults(data);
+      setMedia(data);
     });
   };
 
-  const handleCategoryToggle = (filterCategory) => {
-    const data = searchResults || trendingResults;
-    if (filterCategory === 'all') {
-      updateMedia(data);
-    } else {
-      updateMedia(() =>
-        data.filter((item) => item.mediaType === filterCategory)
-      );
-    }
+  const handleReset = () => {
+    setSearchResults(null);
+    setMedia(trendingResults);
   };
 
+  const handleCategoryToggle = (filterCategory) => {
+    setFilter(filterCategory);
+  };
+
+  const filterMediaByCategory = (data) => {
+    if (filter === 'all') {
+      return data;
+    }
+    return data.filter((item) => item.mediaType === filter);
+  };
+
+  const filteredMedia = filterMediaByCategory(media);
+
   const getResultsText = () => {
-    const { length } = media;
+    const { length } = filteredMedia;
     const suffix = length === 1 ? '' : 's';
     return `${length} result${suffix} found`;
   };
@@ -71,14 +81,16 @@ const MovieFinder = () => {
         <SearchBar
           defaultText={defaultSearchText}
           handleSearch={handleSearch}
+          handleReset={handleReset}
         />
         <ToggleButtons
+          value={filter}
           categories={filterCategories}
           handleCategoryToggle={handleCategoryToggle}
         />
         {searchResults && <p>{getResultsText()}</p>}
         {media &&
-          media.map((item) => (
+          filteredMedia.map((item) => (
             <MovieCard
               key={item.id}
               name={item.name}

@@ -15,9 +15,10 @@ describe('filtering search results list', () => {
 
   const wrapper = shallow(
     <ToggleButtons
+      value="all"
       categories={categories}
       handleCategoryToggle={handleCategoryToggle}
-    />,
+    />
   );
 
   afterEach(() => {
