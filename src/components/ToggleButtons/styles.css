@@ -1,7 +1,5 @@
 .toggleButton {
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   border: 1px solid var(--blue-grey-dark);
   border-radius: 3px;
   min-width: 3em;

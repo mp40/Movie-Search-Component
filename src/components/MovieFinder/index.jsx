@@ -6,15 +6,9 @@ import ToggleButtons from '../ToggleButtons';
 
 import { ReactComponent as Logo } from '../../assets/Logo.svg';
 
-import {
-  getFilteredTrending,
-  fetchTrending,
-  getFilteredResults,
-} from '../../fetch';
+import { getFilteredTrending, getFilteredResults } from '../../fetch';
 
 import { defaultSearchText, filterCategories } from './data';
-
-import staticResults from '../../fixtures/staticResults.json';
 
 import './styles.css';
 
@@ -25,20 +19,14 @@ const MovieFinder = () => {
   const [media, setMedia] = useState(null);
 
   useEffect(() => {
-    // getFilteredTrending().then((data) => {
-    //   if (trendingResults) {
-    //     return;
-    //   }
-    //   updateTrendingResults(data);
-    //   updateMedia(data);
-    // });
-
     if (trendingResults) {
       return;
     }
 
-    setTrendingResults(staticResults);
-    setMedia(staticResults);
+    getFilteredTrending().then((data) => {
+      setTrendingResults(data);
+      setMedia(data);
+    });
   }, [trendingResults]);
 
   const handleSearch = (query) => {

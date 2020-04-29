@@ -4,7 +4,7 @@
 
 .percentContainer > div {
   height: 0.375em;
-  width: 9.5em;
+  width: 6em;
   border-radius: 0.188em;
 }
 
@@ -29,4 +29,10 @@
 
 .green {
   background-color: #74b816;
+}
+
+@media screen and (min-width: 47.25em) {
+  .percentContainer > div {
+    width: 9.5em;
+  }
 }
