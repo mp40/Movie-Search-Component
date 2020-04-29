@@ -12,7 +12,7 @@ const ToggleButtons = ({ categories, handleCategoryToggle }) => {
   };
 
   return (
-    <>
+    <div className="toggleButtons">
       {categories.map((category) => (
         <button
           type="button"
@@ -25,7 +25,7 @@ const ToggleButtons = ({ categories, handleCategoryToggle }) => {
           <span>{category.value}</span>
         </button>
       ))}
-    </>
+    </div>
   );
 };
 
