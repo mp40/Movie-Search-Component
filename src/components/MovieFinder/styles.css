@@ -1,8 +1,6 @@
 .movieFinderContainer {
   border-radius: 3px;
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   border: 1px solid var(--blue-grey);
   box-shadow: 0px 2px 5px 0 var(--blue-grey-light);
 }

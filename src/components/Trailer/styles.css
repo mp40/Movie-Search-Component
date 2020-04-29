@@ -47,12 +47,20 @@
 @media screen and (max-width: 47em) {
   .trailer > button {
     height: 20px;
-    padding: 0 10px;
+    padding: 0 8px;
     font-size: 0.7em;
   }
 
-  .trailer > button > span {
+  .trailerAvailable > span {
     margin-left: 6px;
+  }
+
+  .trailerUnavailable > svg {
+    display: none;
+  }
+
+  .trailerUnavailable > span {
+    margin-left: 0 !important;
   }
 }
 
