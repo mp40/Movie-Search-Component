@@ -11,7 +11,10 @@ const SearchBar = ({ defaultText, handleSearch }) => {
   const [value, updateValue] = useState('');
 
   return (
-    <form className="searchBarForm" onSubmit={() => handleSearch()}>
+    <form
+      className="searchBarForm"
+      onSubmit={(event) => handleSearch(event.target.value)}
+    >
       <div className="searchBar">
         <div className={`inputContainer ${value ? 'hasValue' : 'noValue'}`}>
           <Image path={searchIcon} alt="search" />
@@ -22,9 +25,9 @@ const SearchBar = ({ defaultText, handleSearch }) => {
             onChange={(event) => updateValue(event.target.value)}
           />
           {value && (
-          <button type="button" onClick={() => updateValue('')}>
-            Clear
-          </button>
+            <button type="button" onClick={() => updateValue('')}>
+              Clear
+            </button>
           )}
         </div>
         <input type="submit" value="Search" />
