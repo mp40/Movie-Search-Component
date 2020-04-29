@@ -4,6 +4,8 @@ import SearchBar from './index';
 
 describe('MovieFinder search input', () => {
   const handleSearch = jest.fn();
+  const event = { preventDefault: () => {} };
+
   const wrapper = shallow(<SearchBar handleSearch={handleSearch} />);
 
   afterEach(() => {
@@ -17,7 +19,7 @@ describe('MovieFinder search input', () => {
   });
   it('should submit query when search button clicked', () => {
     const form = wrapper.find('form');
-    form.simulate('submit');
-    expect(handleSearch).toHaveBeenCalled();
+    form.simulate('submit', event);
+    expect(handleSearch).toHaveBeenCalledWith('Biggles');
   });
 });
