@@ -64,10 +64,10 @@ const MovieFinderCard = ({
 
 MovieFinderCard.propTypes = {
   name: PropTypes.string.isRequired,
-  imagePath: PropTypes.string,
+  imagePath: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   mediaType: PropTypes.string.isRequired,
   date: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-  overview: PropTypes.string.isRequired,
+  overview: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   gender: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
   voteAverage: PropTypes.oneOfType([PropTypes.number, PropTypes.bool]),
   trailers: PropTypes.arrayOf(PropTypes.object),
@@ -76,6 +76,7 @@ MovieFinderCard.propTypes = {
 MovieFinderCard.defaultProps = {
   imagePath: false,
   date: false,
+  overview: false,
   gender: false,
   voteAverage: false,
   trailers: [],

@@ -11,12 +11,14 @@ const Thumbnail = ({ alt, path }) => {
       {(!loaded || !path) && (
       <div className="thumbnail  placeholder" />
       )}
+      {path && (
       <img
         src={path}
         alt={alt}
         className={`thumbnail ${loaded ? 'loaded' : 'loading'}`}
         onLoad={() => setLoaded(true)}
       />
+      )}
     </>
   );
 };

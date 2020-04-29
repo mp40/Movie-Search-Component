@@ -4,28 +4,9 @@
   height: 2.25em;
 }
 
-.searchBar > input {
-  box-sizing: border-box;
-  border: 1px solid var(--blue-grey-dark);
-  border-radius: 0 4px 4px 0;
-  margin-left: -1px;
-  color: var(--blue-slate-dark);
-  font-size: 0.875em;
-  background: linear-gradient(0deg, var(--blue-sky) 0%, #fff 100%);
-}
-
-.searchBar > input:hover {
-  background: linear-gradient(0deg, var(--blue-sky-light) 0%, #fff 100%);
-}
-
-.searchBar > input:active {
-  background: linear-gradient(180deg, var(--blue-sky-light) 0%, #fff 100%);
-  box-shadow: inset 0 2px 3px 0 rgba(157, 175, 189, 0.5);
-}
-
 .inputContainer {
   border: 1px solid var(--blue-grey-dark);
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   display: flex;
   flex: 1 0 0;
   z-index: 1;
@@ -47,6 +28,7 @@
   color: var(--blue-ink);
   font-size: 0.875em;
   flex: 1 0 0;
+  border-radius: 4px;
 }
 
 .inputContainer > input:focus::placeholder {
@@ -59,7 +41,7 @@
 }
 
 .noValue > input {
-  font-size: 0.5em;
+  font-size: 0.75em;
 }
 
 .inputContainer > button {
