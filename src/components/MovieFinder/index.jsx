@@ -77,8 +77,8 @@ const MovieFinder = () => {
           handleCategoryToggle={handleCategoryToggle}
         />
         {searchResults && <p>{getResultsText()}</p>}
-        {media &&
-          filteredMedia.map((item) => (
+        {media
+          && filteredMedia.map((item) => (
             <MovieCard
               key={item.id}
               name={item.name}

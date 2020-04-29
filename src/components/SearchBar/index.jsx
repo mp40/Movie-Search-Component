@@ -6,40 +6,40 @@ import searchIcon from '../../assets/searchIcon.svg';
 import './styles.css';
 
 const SearchBar = ({ defaultText, handleSearch, handleReset }) => {
-  const [value, updateValue] = useState('');
+  const [query, setQuery] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (value) => {
+    setQuery(value);
+
     if (value === '') {
       return;
     }
 
-    event.preventDefault();
     handleSearch(value);
   };
 
   const handleClear = () => {
-    updateValue('');
+    setQuery('');
     handleReset();
   };
 
   return (
-    <form className="searchBarForm" onSubmit={(event) => handleSubmit(event)}>
+    <form className="searchBarForm">
       <div className="searchBar">
-        <div className={`inputContainer ${value ? 'hasValue' : 'noValue'}`}>
+        <div className={`inputContainer ${query ? 'hasValue' : 'noValue'}`}>
           <img src={searchIcon} alt="search" />
           <input
             type="text"
-            value={value}
+            value={query}
             placeholder={defaultText}
-            onChange={(event) => updateValue(event.target.value)}
+            onChange={(event) => handleSubmit(event.target.value)}
           />
-          {value && (
+          {query && (
             <button type="button" onClick={() => handleClear()}>
               Clear
             </button>
           )}
         </div>
-        <input type="submit" value="Search" />
       </div>
     </form>
   );
