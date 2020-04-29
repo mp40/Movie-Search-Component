@@ -1,10 +1,14 @@
-.image {
-  width: 15rem;
-}
-
 .thumbnail {
   width: 6em;
   object-fit: contain;
+}
+
+.thumbnail.loading {
+  display: none;
+}
+
+.thumbnail.loaded {
+  display: block;
 }
 
 .placeholder {
@@ -22,9 +26,5 @@
   .placeholder {
     height: 14.25em;
     min-width: 9.5em;
-  }
-
-  .image {
-    width: initial;
   }
 }

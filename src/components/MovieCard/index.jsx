@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Image from '../Image';
+import Thumbnail from '../Thumbnail';
 import Rating from '../Rating';
 import Trailer from '../Trailer';
 
@@ -37,10 +37,9 @@ const MovieFinderCard = ({
 
   return (
     <div className="movieFinderCardContainer">
-      <Image
+      <Thumbnail
         alt={name}
         path={imagePath ? `${API_IMAGE_URL}${imagePath}` : false}
-        thumbnail
       />
       <div className="movieFinderCardDetails">
         <h1>

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-import Image from '../Image';
-
 import searchIcon from '../../assets/searchIcon.svg';
 
 import './styles.css';
@@ -28,7 +26,7 @@ const SearchBar = ({ defaultText, handleSearch, handleReset }) => {
     <form className="searchBarForm" onSubmit={(event) => handleSubmit(event)}>
       <div className="searchBar">
         <div className={`inputContainer ${value ? 'hasValue' : 'noValue'}`}>
-          <Image path={searchIcon} alt="search" />
+          <img src={searchIcon} alt="search" />
           <input
             type="text"
             value={value}
