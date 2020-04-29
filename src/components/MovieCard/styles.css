@@ -15,6 +15,7 @@
   position: relative;
   margin-left: 1em;
   font-weight: 300;
+  width: 100%;
 }
 
 .movieFinderCardDetails > h1 {
@@ -64,9 +65,9 @@
 }
 
 .clamp {
-  --max-lines: 5;
-  position: relative;
-  max-height: calc(1.25em * var(--max-lines));
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
