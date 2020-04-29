@@ -10,11 +10,13 @@ import './styles.css';
 const SearchBar = ({ defaultText, handleSearch }) => {
   const [value, updateValue] = useState('');
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    handleSearch(value);
+  };
+
   return (
-    <form
-      className="searchBarForm"
-      onSubmit={(event) => handleSearch(event.target.value)}
-    >
+    <form className="searchBarForm" onSubmit={(event) => handleSubmit(event)}>
       <div className="searchBar">
         <div className={`inputContainer ${value ? 'hasValue' : 'noValue'}`}>
           <Image path={searchIcon} alt="search" />

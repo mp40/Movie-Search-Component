@@ -6,7 +6,11 @@ import ToggleButtons from '../ToggleButtons';
 
 import { ReactComponent as Logo } from '../../assets/Logo.svg';
 
-import { getFilteredTrending, fetchTrending } from '../../fetch';
+import {
+  getFilteredTrending,
+  fetchTrending,
+  getFilteredResults,
+} from '../../fetch';
 
 import { defaultSearchText, filterCategories } from './data';
 
@@ -31,18 +35,31 @@ const MovieFinder = () => {
       return;
     }
     updateTrendingResults(staticResults);
-    updateSearchResults(staticResults);
     updateMedia(staticResults);
   }, [trendingResults]);
 
+  const handleSearch = (query) => {
+    getFilteredResults(query).then((data) => {
+      updateSearchResults(data);
+      updateMedia(data);
+    });
+  };
+
   const handleCategoryToggle = (filterCategory) => {
+    const data = searchResults || trendingResults;
     if (filterCategory === 'all') {
-      updateMedia(searchResults);
+      updateMedia(data);
     } else {
       updateMedia(() =>
-        searchResults.filter((item) => item.mediaType === filterCategory)
+        data.filter((item) => item.mediaType === filterCategory)
       );
     }
+  };
+
+  const getResultsText = () => {
+    const { length } = media;
+    const suffix = length === 1 ? '' : 's';
+    return `${length} result${suffix} found`;
   };
 
   return (
@@ -51,11 +68,15 @@ const MovieFinder = () => {
         <Logo />
       </div>
       <div className="movieFinderBody">
-        <SearchBar defaultText={defaultSearchText} handleSearch={() => {}} />
+        <SearchBar
+          defaultText={defaultSearchText}
+          handleSearch={handleSearch}
+        />
         <ToggleButtons
           categories={filterCategories}
           handleCategoryToggle={handleCategoryToggle}
         />
+        {searchResults && <p>{getResultsText()}</p>}
         {media &&
           media.map((item) => (
             <MovieCard
