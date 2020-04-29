@@ -24,6 +24,18 @@
   padding: 0 1.5em;
 }
 
+.movieFinderBody > .searchBarForm,
+.movieFinderBody > .toggleButtons {
+  margin: 0 0 1em;
+}
+
+.movieFinderBody > p {
+  font-size: 1em;
+  color: var(--blue-ink);
+  margin: 0;
+  line-height: 1.5em;
+}
+
 @media screen and (min-width: 47.25em) {
   .movieFinderContainer {
     width: var(--width-large);

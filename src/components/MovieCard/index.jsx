@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Image from '../Image';
+import Thumbnail from '../Thumbnail';
 import Rating from '../Rating';
 import Trailer from '../Trailer';
 
@@ -27,12 +27,20 @@ const MovieFinderCard = ({
     if (gender) {
       return gender === 1 ? 'Gender: Female' : 'Gender: Male';
     }
+
+    if (!date) {
+      return '';
+    }
+
     return `${mediaTypeDateText[mediaType]} ${date.replace(/-/g, '/')}`;
   };
 
   return (
     <div className="movieFinderCardContainer">
-      <Image alt={name} path={`${API_IMAGE_URL}${imagePath}`} thumbnail />
+      <Thumbnail
+        alt={name}
+        path={imagePath ? `${API_IMAGE_URL}${imagePath}` : false}
+      />
       <div className="movieFinderCardDetails">
         <h1>
           <span>{name}</span>
@@ -56,7 +64,7 @@ const MovieFinderCard = ({
 
 MovieFinderCard.propTypes = {
   name: PropTypes.string.isRequired,
-  imagePath: PropTypes.string.isRequired,
+  imagePath: PropTypes.string,
   mediaType: PropTypes.string.isRequired,
   date: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   overview: PropTypes.string.isRequired,
@@ -66,6 +74,7 @@ MovieFinderCard.propTypes = {
 };
 
 MovieFinderCard.defaultProps = {
+  imagePath: false,
   date: false,
   gender: false,
   voteAverage: false,
