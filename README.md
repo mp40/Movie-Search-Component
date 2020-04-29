@@ -2,7 +2,7 @@
 
 #### Scope
 
-Build a component (widget) that displays movies, TV shows, and people using (The Movie DB API)[https://developers.themoviedb.org/3/getting-started/introduction].
+Build a component (widget) that displays movies, TV shows, and people using [The Movie DB API](https://developers.themoviedb.org/3/getting-started/introduction).
 
 #### Features
 * Fetches trending media from API when widget is loaded.
@@ -21,7 +21,7 @@ Build a component (widget) that displays movies, TV shows, and people using (The
 * Initially I used `iFrame` for playing trailers, however due to incompatibility with unmuted auto-play and auto-stop I added the `react-youtube` package and used that instead.
 * Long titles and descriptions are truncated.
 * CSS rules for both mobile and desktop.
-
+* Added placeholders for thumbnails that are loading or missing.
 
 
 
