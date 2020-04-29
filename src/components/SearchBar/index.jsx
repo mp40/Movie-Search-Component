@@ -11,6 +11,10 @@ const SearchBar = ({ defaultText, handleSearch, handleReset }) => {
   const [value, updateValue] = useState('');
 
   const handleSubmit = (event) => {
+    if (value === '') {
+      return;
+    }
+
     event.preventDefault();
     handleSearch(value);
   };

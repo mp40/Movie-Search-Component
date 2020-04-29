@@ -30,4 +30,9 @@ describe('MovieFinder search input', () => {
     expect(wrapper.find('input').at(0).props().value).toBe('');
     expect(handleReset).toHaveBeenCalled();
   });
+  it('should not send empty query', () => {
+    const form = wrapper.find('form');
+    form.simulate('submit', event);
+    expect(handleSearch).not.toHaveBeenCalled();
+  });
 });
