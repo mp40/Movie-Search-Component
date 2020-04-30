@@ -6,7 +6,7 @@
 Build a component (widget) that displays movies, TV shows, and people using [The Movie DB API](https://developers.themoviedb.org/3/getting-started/introduction).
 
 #### Features
-* Fetches trending media from API when widget is loaded.
+* Fetches trending media from API when widget is first loaded.
 * Search by name.
 * Searches as user types in search input box.
 * Filterable results by all, movie, tv show and person.
