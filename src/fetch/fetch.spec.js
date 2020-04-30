@@ -39,7 +39,7 @@ describe('fetching data', () => {
       const data = await fetchTrending();
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toHaveBeenCalledWith(
-        `${API_TRENDING_URL}${API_KEY}`
+        `${API_TRENDING_URL}${API_KEY}`,
       );
       expect(data).toEqual(payload);
     });
@@ -49,7 +49,7 @@ describe('fetching data', () => {
       const data = await fetchSearchResults(query);
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toHaveBeenCalledWith(
-        `${API_SEARCH_URL}${API_KEY}&language=en-US&query=${query}&page=1`
+        `${API_SEARCH_URL}${API_KEY}&language=en-US&query=${query}&page=1`,
       );
       expect(data).toEqual(payload);
     });
@@ -69,7 +69,7 @@ describe('fetching data', () => {
       const data = await fetchActorData(id);
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toHaveBeenCalledWith(
-        `${API_ACTOR_URL}${id}${API_KEY}&language=en-US`
+        `${API_ACTOR_URL}${id}${API_KEY}&language=en-US`,
       );
       expect(data).toEqual(actorPayload);
     });
@@ -90,7 +90,7 @@ describe('fetching data', () => {
       const data = await fetchVideoData(mediaType, id);
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toHaveBeenCalledWith(
-        `${API_BASE_URL}/movie/${id}/videos${API_KEY}&language=en-US`
+        `${API_BASE_URL}/movie/${id}/videos${API_KEY}&language=en-US`,
       );
       expect(data).toEqual(videoPayload);
     });
@@ -101,7 +101,7 @@ describe('fetching data', () => {
       const data = await fetchVideoData(mediaType, id);
       expect(global.fetch).toHaveBeenCalledTimes(1);
       expect(global.fetch).toHaveBeenCalledWith(
-        `${API_BASE_URL}/tv/${id}/videos${API_KEY}&language=en-US`
+        `${API_BASE_URL}/tv/${id}/videos${API_KEY}&language=en-US`,
       );
       expect(data).toEqual(videoPayload);
     });

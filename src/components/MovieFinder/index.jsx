@@ -12,6 +12,8 @@ import { defaultSearchText, filterCategories } from './data';
 
 import './styles.css';
 
+const CACHE = {};
+
 const MovieFinder = () => {
   const [trendingResults, setTrendingResults] = useState(null);
   const [searchResults, setSearchResults] = useState(null);
@@ -30,9 +32,16 @@ const MovieFinder = () => {
   }, [trendingResults]);
 
   const handleSearch = (query) => {
+    if (CACHE[query]) {
+      setSearchResults(CACHE[query]);
+      setMedia(CACHE[query]);
+      return;
+    }
+
     getFilteredResults(query).then((data) => {
       setSearchResults(data);
       setMedia(data);
+      CACHE[query] = data;
     });
   };
 
@@ -77,8 +86,8 @@ const MovieFinder = () => {
           handleCategoryToggle={handleCategoryToggle}
         />
         {searchResults && <p>{getResultsText()}</p>}
-        {media &&
-          filteredMedia.map((item) => (
+        {media
+          && filteredMedia.map((item) => (
             <MovieCard
               key={item.id}
               name={item.name}
