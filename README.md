@@ -7,6 +7,7 @@ Build a component (widget) that displays movies, TV shows, and people using [The
 #### Features
 * Fetches trending media from API when widget is loaded.
 * Search by name.
+* Searches as user types in search input box.
 * Filterable results by all, movie, tv show and person.
 
 #### To Run
@@ -22,6 +23,10 @@ Build a component (widget) that displays movies, TV shows, and people using [The
 * Long titles and descriptions are truncated.
 * CSS rules for both mobile and desktop.
 * Added placeholders for thumbnails that are loading or missing.
+* Added simple cache for storing prior search queries and results.
+
+#### MVP Branch
+* I have an MVP branch which has a `submit` button for making search querries rather than search as typing.
 
 
 
