@@ -1,4 +1,5 @@
 ### Movie-Search-Component
+![image](https://user-images.githubusercontent.com/30450957/80659573-4ab7bd00-8ac4-11ea-94f3-8a51aee78321.png)
 
 #### Scope
 
@@ -15,6 +16,7 @@ Build a component (widget) that displays movies, TV shows, and people using [The
 * Rename `env_sample` to `env` and replace `YOUR_API_KEY_HERE` with your API key. Please note this is for testing in local host. API keys do not belong deployed in the frontend.
 * To start, type `yarn start`.
 * To run tests, type `yarn test`.
+* To use, open `http://localhost:3000/`.
 
 #### Implementation
 * Used TDD when setting up fetches as well as for building `ToggleButtons` and `SearchBar`.
@@ -28,6 +30,5 @@ Build a component (widget) that displays movies, TV shows, and people using [The
 #### MVP Branch
 * I have an MVP branch which has a `submit` button for making search querries rather than search as typing.
 
-
-
-
+#### MVP
+![image](https://user-images.githubusercontent.com/30450957/80659527-28be3a80-8ac4-11ea-8d02-535c72c9b444.png)
