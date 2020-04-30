@@ -16,7 +16,7 @@ Build a component (widget) that displays movies, TV shows, and people using [The
 * Rename `env_sample` to `env` and replace `YOUR_API_KEY_HERE` with your API key. Please note this is for testing in local host. API keys do not belong deployed in the frontend.
 * To start, type `yarn start`.
 * To run tests, type `yarn test`.
-* To use, open `http://localhost:3000/`.
+* To use, open [localhost:3000](http://localhost:3000/).
 
 #### Implementation
 * Used TDD when setting up fetches as well as for building `ToggleButtons` and `SearchBar`.
